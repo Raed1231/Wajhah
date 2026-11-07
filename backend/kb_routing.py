@@ -30,13 +30,12 @@ _RULES = _index(KB["routing_rules"])
 _TAXONOMY = _index(KB["taxonomy_values"])
 KNOWN_EVIDENCE_IDS = frozenset(_SCENARIOS) | frozenset(_RULES)
 
-# This KB authorizes conditional initial experiments, not production validation.
+# Pilot routing coverage is not production validation.
 _COVERAGE = {"DOCUMENTED_LIMITED_SCOPE"}
 _GUIDANCE = {"DOCUMENTED_WITH_LIMITATIONS"}
 _READINESS = {"CONDITIONAL_INITIAL_EXPERIMENTS"}
 
-# Fixed diagnostic vocabulary only. Never include model identifiers, complaint
-# contents, channel values, or raw parser exceptions in a public/loggable error.
+# Log fixed reason codes only, never identifiers, content or parser details.
 ROUTE_VALIDATION_REASONS = frozenset({
     'KB_UNKNOWN_SERVICE', 'KB_SERVICE_COVERAGE', 'KB_SERVICE_GUIDANCE',
     'KB_SERVICE_READINESS', 'KB_SERVICE_SCOPE', 'KB_AUTHORITY_OR_CHANNEL_MISSING',
@@ -92,7 +91,7 @@ def validate_service(service_id):
         raise RouteValidationError('KB_CHANNEL_URL_PARSE') from None
     if parsed.scheme != "https" or not parsed.hostname or parsed.username or parsed.password:
         raise RouteValidationError('KB_CHANNEL_URL_POLICY')
-    # Parsing the port also rejects invalid ports rather than returning a bad link.
+    # Accessing .port validates the port syntax.
     try:
         parsed.port
     except ValueError:
@@ -127,7 +126,7 @@ def _without_provenance(value):
 
 
 def _prompt_knowledge():
-    # Projection is built from the unchanged source on startup, never a second KB.
+    # Derive the prompt projection from the source KB; no separate KB is maintained.
     projection = {
         "verification": KB["verification"],
         "decision_policy": KB["decision_policy"],

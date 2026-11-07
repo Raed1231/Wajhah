@@ -38,8 +38,7 @@ class RoutingDecision(StrictModel):
     service_id: str | None = Field(default=None, max_length=128)
     question: str = Field(default='', max_length=400)
     reason: str = Field(default='', max_length=800)
-    # Constrain Gemini generation to source scenario/rule IDs. The independent
-    # server guard still rejects unknown IDs and evidence for a different service.
+    # Constrain evidence IDs, then enforce service association independently.
     evidence_ids: list[Annotated[str, Field(max_length=128, json_schema_extra={
         'enum': sorted(KNOWN_EVIDENCE_IDS),
         'description': 'Documented complaint-scenario or routing-rule ID only; service IDs are not evidence.',

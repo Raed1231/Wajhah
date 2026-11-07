@@ -13,9 +13,9 @@ class RequestBodyLimit:
             return await self.app(scope, receive, send)
         path = scope.get('path')
         multipart = path in {'/attachments', '/analyze-attachment', '/route-with-attachment'}
-        if scope.get('method') != 'POST' or not (multipart or path in {'/route', '/follow-up'}):
+        if scope.get('method') != 'POST' or not (multipart or path in {'/route', '/follow-up', '/complaint-draft'}):
             return await self.app(scope, receive, send)
-        limit = 6 * 1024 * 1024 if multipart else 512 * 1024 if path == '/follow-up' else 256 * 1024
+        limit = 6 * 1024 * 1024 if multipart else 512 * 1024 if path in {'/follow-up', '/complaint-draft'} else 256 * 1024
         buffer, total = bytearray(), 0
         headers = dict(scope.get('headers', []))
         declared = headers.get(b'content-length', b'')
@@ -35,8 +35,7 @@ class RequestBodyLimit:
             error = ServiceError('ATTACHMENT_TOO_LARGE' if multipart else 'REQUEST_TOO_LARGE', 413,
                                  'حجم الطلب يتجاوز الحد المسموح.')
             return await JSONResponse(status_code=413, content={'detail': error.detail(request_id())})(scope, receive, send)
-        # Buffered bytes are bounded (6 MiB or 256 KiB); the parser never sees
-        # an oversized body, including chunked requests or extra file parts.
+        # Enforce the byte limit before parsing, including chunked multipart bodies.
         body = bytes(buffer)
         sent = False
         async def replay():

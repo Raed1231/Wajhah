@@ -53,8 +53,7 @@ def validate_content(content, filename, content_type=None):
             pages = len(reader.pages)
             if not 1 <= pages <= MAX_PAGES:
                 raise ServiceError('PDF_PAGE_LIMIT', 400, 'أرسل PDF يحتوي من صفحة واحدة إلى 20 صفحة.')
-            # Force page resource/content resolution to reject header-only or
-            # broken page trees locally, before any provider request.
+            # Resolve content streams locally to reject malformed PDFs before AI.
             decoded_bytes = 0
             for page in reader.pages:
                 if float(page.mediabox.width) <= 0 or float(page.mediabox.height) <= 0:

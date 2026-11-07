@@ -48,7 +48,7 @@ async def close_client():
         if client is not None:
             await client.aio.aclose()
     finally:
-        # The SDK deliberately leaves a caller-provided HTTP client open.
+        # The caller owns the HTTP client supplied to the SDK.
         if http_client is not None:
             await http_client.aclose()
 
@@ -67,8 +67,8 @@ def classify_error(error):
 
 
 async def generate(schema, system_instruction, contents, stage):
-    # HTTP requests inherit a shared deadline across all AI stages. Direct
-    # callers receive one bounded budget covering this call and its retries.
+    # Share one deadline across stages, attempts and backoff. Direct calls
+    # receive the same bounded budget.
     with request_budget():
         return await _generate(schema, system_instruction, contents, stage)
 
@@ -78,9 +78,8 @@ async def _generate(schema, system_instruction, contents, stage):
     config = types.GenerateContentConfig(
         system_instruction=system_instruction,
         response_mime_type='application/json',
-        # SDK 2.30 converts Pydantic extra='forbid' into an unsupported legacy
-        # response_schema.additional_properties field. Send standard JSON Schema
-        # intact, then independently enforce the strict model on the server.
+        # SDK 2.30's legacy conversion emits unsupported additional_properties fields.
+        # Pass JSON Schema directly and enforce strict validation on the server.
         response_json_schema=schema.model_json_schema(),
         temperature=0,
         max_output_tokens=2300,
@@ -103,12 +102,12 @@ async def _generate(schema, system_instruction, contents, stage):
             problem = classify_error(error)
             source = ('provider' if isinstance(error, errors.APIError) else
                       'transport' if isinstance(error, httpx.HTTPError) else 'local_deadline')
-            # Do not log str(error): SDK messages may contain request data or URLs.
+            # Provider error text may expose request data or URLs; log metadata only.
             logger.warning('ai_failure request_id=%s stage=%s model=%s attempt=%d exception=%s provider_code=%s code=%s source=%s timeout_s=%.1f elapsed_ms=%.1f',
                            request_id(), stage, MODEL, attempt, type(error).__name__, getattr(error, 'code', None), problem.code,
                            source, remaining, (time.perf_counter() - start) * 1000)
-            # Retry only explicit transient provider responses; no silent replay on
-            # timeout, network ambiguity, malformed output or quota exhaustion.
+            # Retry explicit transient provider errors only; never replay timeouts,
+            # quota, malformed output or ambiguous transport failures.
             if getattr(error, 'code', None) in (500, 502, 503) and attempt < MAX_ATTEMPTS:
                 with measure('retry_wait'):
                     await asyncio.sleep(min(RETRY_DELAY_SECONDS, remaining_seconds()))

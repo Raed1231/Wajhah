@@ -1,0 +1,4037 @@
+{
+  "schema_version": "1.0.0",
+  "dataset_id": "wajhah.service_information",
+  "reviewed_at": "2026-10-31",
+  "sources": [
+    {
+      "id": "source.historical.media.report",
+      "url": "https://perform.gmedia.gov.sa/dashboard/user/report/create",
+      "title": "Historical pilot documentation: Create Media Report / New Media Report",
+      "accessed_at": null,
+      "verification_status": "Unverified",
+      "evidence_basis": "HISTORICAL_DOCUMENT_ONLY"
+    },
+    {
+      "id": "source.historical.health.technical_access",
+      "url": "https://937.moh.gov.sa/tickets/create",
+      "title": "Historical pilot documentation: Technical reports and access issues / New complaint or ticket",
+      "accessed_at": null,
+      "verification_status": "Unverified",
+      "evidence_basis": "HISTORICAL_DOCUMENT_ONLY"
+    },
+    {
+      "id": "source.historical.investment.service_contact",
+      "url": "https://investsaudi.sa/contact-us",
+      "title": "Historical pilot documentation: Invest Saudi Contact Us service complaints",
+      "accessed_at": null,
+      "verification_status": "Unverified",
+      "evidence_basis": "HISTORICAL_DOCUMENT_ONLY"
+    },
+    {
+      "id": "source.historical.investment.integrity",
+      "url": "https://misa.gov.sa/complaints/",
+      "title": "Historical pilot documentation: MISA integrity and violations reports",
+      "accessed_at": null,
+      "verification_status": "Unverified",
+      "evidence_basis": "HISTORICAL_DOCUMENT_ONLY"
+    },
+    {
+      "id": "source.historical.education.complaint",
+      "url": "https://tawasul.moe.gov.sa/Pages/eTickets?Complaint",
+      "title": "Historical pilot documentation: File a Complaint / Complaint Ticket",
+      "accessed_at": null,
+      "verification_status": "Unverified",
+      "evidence_basis": "HISTORICAL_DOCUMENT_ONLY"
+    },
+    {
+      "id": "source.historical.hrsd.call_center_19911",
+      "url": "https://selfservice.hrsd.gov.sa/complaints",
+      "title": "Historical pilot documentation: Complaints against 19911 call center employees",
+      "accessed_at": null,
+      "verification_status": "Unverified",
+      "evidence_basis": "HISTORICAL_DOCUMENT_ONLY"
+    },
+    {
+      "id": "source.public.moe.ar",
+      "url": "https://www.moe.gov.sa/ar/knowledgecenter/eservices/Pages/complaints.aspx",
+      "title": "Ministry of Education — complaint service",
+      "accessed_at": "2026-10-31",
+      "verification_status": "Verified",
+      "evidence_basis": "PRIMARY_PUBLIC_PAGE_OBSERVED"
+    },
+    {
+      "id": "source.public.moe.en",
+      "url": "https://www.moe.gov.sa/en/knowledgecenter/eservices/pages/complaints.aspx",
+      "title": "Ministry of Education — File a Complaint",
+      "accessed_at": "2026-10-31",
+      "verification_status": "Verified",
+      "evidence_basis": "PRIMARY_PUBLIC_PAGE_OBSERVED"
+    },
+    {
+      "id": "source.public.hrsd.client",
+      "url": "https://www.hrsd.gov.sa/ministry-services/services/client-page",
+      "title": "HRSD — Beneficiary Page",
+      "accessed_at": "2026-10-31",
+      "verification_status": "Verified",
+      "evidence_basis": "PRIMARY_PUBLIC_PAGE_OBSERVED"
+    },
+    {
+      "id": "source.public.moh.937",
+      "url": "https://www.moh.gov.sa/en/eservices/pages/digital-tickets.aspx",
+      "title": "MOH — Suggestions and Complaints Services (937)",
+      "accessed_at": "2026-10-31",
+      "verification_status": "Verified",
+      "evidence_basis": "PRIMARY_PUBLIC_PAGE_OBSERVED"
+    },
+    {
+      "id": "source.public.misa.integrity",
+      "url": "https://misa.gov.sa/complaints/",
+      "title": "MISA — integrity reports public form",
+      "accessed_at": "2026-10-31",
+      "verification_status": "Verified",
+      "evidence_basis": "PRIMARY_PUBLIC_FORM_OBSERVED_WITHOUT_SUBMISSION"
+    },
+    {
+      "id": "source.public.invest.contact.limited",
+      "url": "https://investsaudi.sa/contact-us",
+      "title": "Invest Saudi — contact page, limited extracted content",
+      "accessed_at": "2026-10-31",
+      "verification_status": "Verified",
+      "evidence_basis": "PUBLIC_PAGE_OBSERVED_FORM_FIELDS_NOT_RETRIEVED"
+    },
+    {
+      "id": "source.public.moh.guide",
+      "url": "https://www.moh.gov.sa/eServices/cards/Documents/937.pdf",
+      "title": "MOH public 937 user guide, pages 5 and 12–18",
+      "accessed_at": "2026-10-31",
+      "verification_status": "Verified",
+      "evidence_basis": "PUBLIC_PRIMARY_DOCUMENT_OBSERVED"
+    },
+    {
+      "id": "source.public.hrsd.guide",
+      "url": "https://www.hrsd.gov.sa/sites/default/files/2026-09/dlyl-almstkhdm-lsfht-almstfyd---allght-al-rbyt.pdf",
+      "title": "HRSD public Beneficiary Page guide, sections 2 and 7.1–7.5",
+      "accessed_at": "2026-10-31",
+      "verification_status": "Verified",
+      "evidence_basis": "PUBLIC_PRIMARY_DOCUMENT_OBSERVED"
+    },
+    {
+      "id": "source.public.misa.ar",
+      "url": "https://misa.gov.sa/ar/complaints/",
+      "title": "MISA Arabic public reporting form",
+      "accessed_at": "2026-10-31",
+      "verification_status": "Verified",
+      "evidence_basis": "PRIMARY_PUBLIC_FORM_OBSERVED_WITHOUT_SUBMISSION"
+    },
+    {
+      "id": "source.report.education",
+      "url": "https://tawasul.moe.gov.sa/Pages/eTickets?Complaint",
+      "title": "Supplied browser-use report: education",
+      "accessed_at": null,
+      "verification_status": "Unverified",
+      "evidence_basis": "USER_PROVIDED_REPORT_NOT_INDEPENDENTLY_VERIFIED"
+    },
+    {
+      "id": "source.report.health",
+      "url": "https://937.moh.gov.sa/tickets/create",
+      "title": "Supplied browser-use report: health",
+      "accessed_at": null,
+      "verification_status": "Unverified",
+      "evidence_basis": "USER_PROVIDED_REPORT_NOT_INDEPENDENTLY_VERIFIED"
+    },
+    {
+      "id": "source.report.hrsd",
+      "url": "https://selfservice.hrsd.gov.sa/complaints",
+      "title": "Supplied browser-use report: hrsd",
+      "accessed_at": null,
+      "verification_status": "Unverified",
+      "evidence_basis": "USER_PROVIDED_REPORT_NOT_INDEPENDENTLY_VERIFIED"
+    },
+    {
+      "id": "source.report.investment",
+      "url": "https://investsaudi.sa/contact-us",
+      "title": "Supplied browser-use report: investment",
+      "accessed_at": null,
+      "verification_status": "Unverified",
+      "evidence_basis": "USER_PROVIDED_REPORT_NOT_INDEPENDENTLY_VERIFIED"
+    }
+  ],
+  "services": [
+    {
+      "prerequisites": [
+        {
+          "id": "svc.media.report.prerequisite.1",
+          "title_ar": "تسجيل الدخول للوصول إلى نموذج البلاغ",
+          "title_en": "Authenticated login is required to access the complaint creation form",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Unverified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.historical.media.report"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": null
+        },
+        {
+          "id": "svc.media.report.prerequisite.2",
+          "title_ar": "تجهيز مرفق داعم",
+          "title_en": "Prepare evidence attachment",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Unverified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.historical.media.report"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": null
+        },
+        {
+          "id": "svc.media.report.prerequisite.3",
+          "title_ar": "تجهيز وصف البلاغ",
+          "title_en": "Prepare complaint narrative/content",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Unverified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.historical.media.report"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": null
+        },
+        {
+          "id": "svc.media.report.prerequisite.4",
+          "title_ar": "اختيار تصنيف البلاغ ونوعه ونوع المخالف",
+          "title_en": "Choose complaint classification, complaint type, and offender type",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Unverified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.historical.media.report"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": null
+        }
+      ],
+      "steps": [
+        {
+          "id": "svc.media.report.historical.step.2",
+          "title_ar": "مرحلة سابقة: صفحة الخدمة",
+          "title_en": "Service landing page",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Click 'ابدأ الخدمة'",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.media.report"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 2,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.media.report.historical.step.3",
+          "title_ar": "مرحلة سابقة: البحث عن الخدمة",
+          "title_en": "Service search/input page",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Enter 'بلاغ إعلامي' and continue",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.media.report"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 3,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.media.report.historical.step.4",
+          "title_ar": "مرحلة سابقة: بدء الطلب",
+          "title_en": "Request initiation",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Click 'تقديم طلب'",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.media.report"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 4,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.media.report.historical.step.5",
+          "title_ar": "مرحلة سابقة: اختيار الخدمة",
+          "title_en": "Specific service option",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Click 'تقديم بلاغ إعلامي'",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.media.report"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 5,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.media.report.historical.step.6",
+          "title_ar": "مرحلة سابقة: تسجيل الدخول",
+          "title_en": "Authentication",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Manual human authentication completed in same browser session",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.media.report"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 6,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.media.report.historical.step.7",
+          "title_ar": "مرحلة سابقة: لوحة البلاغات",
+          "title_en": "Complaint dashboard",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Click 'بلاغ إعلامي جديد'",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.media.report"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 7,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.media.report.historical.step.8",
+          "title_ar": "مرحلة سابقة: نموذج الشكوى",
+          "title_en": "Complaint form",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Open and inspect 'إنشاء بلاغ إعلامي' form",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.media.report"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 8,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.media.report.historical.step.9",
+          "title_ar": "مرحلة سابقة: خيارات التصنيف التابعة",
+          "title_en": "Dynamic taxonomy inspection",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Select complaint classification/type/offender type to reveal dependent options",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.media.report"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 9,
+          "kind": "HISTORICAL_OBSERVATION"
+        }
+      ],
+      "information": [
+        {
+          "id": "fld.media.01",
+          "title_ar": "تصنيف البلاغ",
+          "title_en": "Report classification",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.historical.media.report"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 1,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.media.02",
+          "title_ar": "نوع البلاغ",
+          "title_en": "Report type",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.historical.media.report"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 2,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.media.03",
+          "title_ar": "نوع المخالف",
+          "title_en": "Offender type",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.historical.media.report"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 3,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.media.04",
+          "title_ar": "المنصة",
+          "title_en": "Platform",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.media.report"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 4,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.media.05",
+          "title_ar": "رقم هوية المخالف",
+          "title_en": "Offender identity number",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.media.report"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 5,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.media.06",
+          "title_ar": "اسم المخالف",
+          "title_en": "Offender name",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.media.report"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 6,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.media.07",
+          "title_ar": "رقم جوال المخالف",
+          "title_en": "Offender mobile number",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.media.report"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 7,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.media.08",
+          "title_ar": "البريد الإلكتروني للمخالف",
+          "title_en": "Offender email",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.media.report"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 8,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.media.09",
+          "title_ar": "حساب المخالف",
+          "title_en": "Offender account",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.media.report"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 9,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.media.10",
+          "title_ar": "رابط المخالفة",
+          "title_en": "Violation URL",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.media.report"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 10,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.media.11",
+          "title_ar": "تاريخ المخالفة",
+          "title_en": "Violation date",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.media.report"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 11,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.media.12",
+          "title_ar": "وقت المخالفة",
+          "title_en": "Violation time",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.media.report"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 12,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.media.13",
+          "title_ar": "المرفق",
+          "title_en": "Attachment",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.historical.media.report"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 13,
+          "kind": "FILE_UPLOAD"
+        },
+        {
+          "id": "fld.media.14",
+          "title_ar": "المحتوى",
+          "title_en": "Report content",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.historical.media.report"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 14,
+          "kind": "INPUT"
+        }
+      ],
+      "documents": [
+        {
+          "id": "svc.media.report.historical.documents.1",
+          "title_ar": "مرفقات داعمة",
+          "title_en": "Supporting attachments",
+          "description_ar": "تفاصيل المستندات غير مكتملة في التوثيق السابق.",
+          "description_en": "Document details are incomplete in historical documentation.",
+          "verification_status": "Unverified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.historical.media.report"
+          ],
+          "conditions_ar": "لا يثبت اسم وثيقة محددة أو إلزام المرفق في كل مسار.",
+          "conditions_en": "Does not establish a named document or a requirement for every path.",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": null,
+          "kind": "HISTORICAL_ATTACHMENT_POLICY"
+        }
+      ],
+      "eligibility": [
+        {
+          "id": "svc.media.report.eligibility.unknown",
+          "title_ar": "الأهلية التفصيلية غير موثقة",
+          "title_en": "Detailed eligibility is not documented",
+          "description_ar": "ملاءمة موضوع الشكوى لا تثبت أهلية مقدمها رسميًا.",
+          "description_en": "A complaint-topic match does not establish official applicant eligibility.",
+          "verification_status": "Missing",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.media.report"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": null
+        }
+      ],
+      "channels": [
+        {
+          "id": "svc.media.report.channel.historical",
+          "title_ar": "رابط الخدمة المسجل سابقًا",
+          "title_en": "Previously recorded service entry",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.media.report"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": null,
+          "kind": "WEB_FORM",
+          "url": "https://perform.gmedia.gov.sa/dashboard/user/report/create"
+        }
+      ],
+      "drafting_guidance": [],
+      "service_id": "svc.media.report",
+      "authority_id": "auth.gmedia",
+      "ai_submission_support": {
+        "verification_status": "Unverified",
+        "status": "UNKNOWN",
+        "source_ids": [
+          "source.historical.media.report"
+        ]
+      },
+      "gaps": [
+        {
+          "id": "svc.media.report.gap.eligibility",
+          "title_ar": "شروط الأهلية",
+          "title_en": "Eligibility rules",
+          "reason_ar": "لا توجد قائمة أهلية مكتملة موثقة لكل حالة.",
+          "reason_en": "No complete eligibility rules are documented for every case."
+        },
+        {
+          "id": "svc.media.report.gap.final",
+          "title_ar": "المرحلة النهائية",
+          "title_en": "Final submission stage",
+          "reason_ar": "لم يُنفذ إرسال حكومي أو اختبار ما بعده؛ لا تُفترض نتيجة الإرسال أو رقم مرجعي.",
+          "reason_en": "No government submission or post-submission test was performed; do not assume a receipt or reference number."
+        },
+        {
+          "id": "svc.media.report.gap.automation",
+          "title_ar": "دعم التقديم الآلي",
+          "title_en": "Automated submission support",
+          "reason_ar": "وجود نموذج أو إمكان الوصول إليه لا يثبت السماح بالتقديم الآلي.",
+          "reason_en": "A visible or accessible form does not establish permission for automated submission."
+        },
+        {
+          "id": "svc.media.report.gap.no.new.report",
+          "title_ar": "لا يوجد تقرير حديث للإعلام",
+          "title_en": "No new media report",
+          "reason_ar": "احتُفظ بالتوثيق السابق غير المتحقق حاليًا؛ لا يثبت اكتمال مراحل الحفظ والإرسال.",
+          "reason_en": "Historical documentation is retained as currently unverified; save and submission stages remain unestablished."
+        }
+      ]
+    },
+    {
+      "prerequisites": [
+        {
+          "id": "svc.health.technical_access.prerequisite.1",
+          "title_ar": "تسجيل الدخول إلى منصة 937",
+          "title_en": "Authenticated login to MOH 937 platform",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Unverified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.historical.health.technical_access"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": null
+        },
+        {
+          "id": "svc.health.technical_access.prerequisite.2",
+          "title_ar": "اختيار مقدم الخدمة والمدينة والمشغل قبل نوع التذكرة",
+          "title_en": "Select provider type, city, and operator before ticket type becomes actionable",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Unverified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.historical.health.technical_access"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": null
+        },
+        {
+          "id": "svc.health.technical_access.guide.nafath",
+          "title_ar": "مصادقة نفاذ",
+          "title_en": "Nafath authentication",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Verified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.public.moh.guide"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "دليل 937 العام المنشور؛ لا يوسع النطاق التقني المعتمد ولا يثبت كل مشغل أو حالة.",
+          "scope_en": "Published general 937 guide; does not expand the supported technical domain or establish every operator or case.",
+          "order": null,
+          "channel_ids": [
+            "svc.health.technical_access.public.service"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "id": "svc.health.technical_access.historical.step.1",
+          "title_ar": "مرحلة سابقة: موقع وزارة الصحة",
+          "title_en": "MOH homepage",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Open official MOH website",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.health.technical_access"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 1,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.health.technical_access.historical.step.2",
+          "title_ar": "مرحلة سابقة: صفحة الدعم",
+          "title_en": "Support page",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Open support/help page",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.health.technical_access"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 2,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.health.technical_access.historical.step.3",
+          "title_ar": "مرحلة سابقة: صفحة منصة 937",
+          "title_en": "937 ticketing landing",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Open complaint platform in new tab",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.health.technical_access"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 3,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.health.technical_access.historical.step.4",
+          "title_ar": "مرحلة سابقة: تسجيل الدخول",
+          "title_en": "Authentication",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Manual login completed by human in same browser session",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.health.technical_access"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 4,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.health.technical_access.historical.step.5",
+          "title_ar": "مرحلة سابقة: لوحة الشكاوى وبدء الإنشاء",
+          "title_en": "Complaint dashboard / create flow",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Start new complaint/ticket",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.health.technical_access"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 5,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.health.technical_access.historical.step.6",
+          "title_ar": "مرحلة سابقة: خطوة التفاصيل",
+          "title_en": "Details step",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Fill/select complaint classification fields",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.health.technical_access"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 6,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.health.technical_access.guide.step.1",
+          "title_ar": "الدخول عبر نفاذ",
+          "title_en": "Sign in through Nafath",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Verified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.public.moh.guide"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "دليل 937 العام المنشور؛ لا يوسع النطاق التقني المعتمد ولا يثبت كل مشغل أو حالة.",
+          "scope_en": "Published general 937 guide; does not expand the supported technical domain or establish every operator or case.",
+          "order": 1,
+          "kind": "OFFICIAL_PUBLISHED_PROCEDURE",
+          "channel_ids": [
+            "svc.health.technical_access.public.service"
+          ]
+        },
+        {
+          "id": "svc.health.technical_access.guide.step.2",
+          "title_ar": "فتح البلاغات والشكاوى",
+          "title_en": "Open reports and complaints",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Verified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.public.moh.guide"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "دليل 937 العام المنشور؛ لا يوسع النطاق التقني المعتمد ولا يثبت كل مشغل أو حالة.",
+          "scope_en": "Published general 937 guide; does not expand the supported technical domain or establish every operator or case.",
+          "order": 2,
+          "kind": "OFFICIAL_PUBLISHED_PROCEDURE",
+          "channel_ids": [
+            "svc.health.technical_access.public.service"
+          ]
+        },
+        {
+          "id": "svc.health.technical_access.guide.step.3",
+          "title_ar": "إضافة بلاغ جديد",
+          "title_en": "Add a new report",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Verified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.public.moh.guide"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "دليل 937 العام المنشور؛ لا يوسع النطاق التقني المعتمد ولا يثبت كل مشغل أو حالة.",
+          "scope_en": "Published general 937 guide; does not expand the supported technical domain or establish every operator or case.",
+          "order": 3,
+          "kind": "OFFICIAL_PUBLISHED_PROCEDURE",
+          "channel_ids": [
+            "svc.health.technical_access.public.service"
+          ]
+        },
+        {
+          "id": "svc.health.technical_access.guide.step.4",
+          "title_ar": "تحديد المستفيد",
+          "title_en": "Identify the beneficiary",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Verified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.public.moh.guide"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "دليل 937 العام المنشور؛ لا يوسع النطاق التقني المعتمد ولا يثبت كل مشغل أو حالة.",
+          "scope_en": "Published general 937 guide; does not expand the supported technical domain or establish every operator or case.",
+          "order": 4,
+          "kind": "OFFICIAL_PUBLISHED_PROCEDURE",
+          "channel_ids": [
+            "svc.health.technical_access.public.service"
+          ]
+        },
+        {
+          "id": "svc.health.technical_access.guide.step.5",
+          "title_ar": "تعبئة تفاصيل الشكوى",
+          "title_en": "Complete complaint details",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Verified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.public.moh.guide"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "دليل 937 العام المنشور؛ لا يوسع النطاق التقني المعتمد ولا يثبت كل مشغل أو حالة.",
+          "scope_en": "Published general 937 guide; does not expand the supported technical domain or establish every operator or case.",
+          "order": 5,
+          "kind": "OFFICIAL_PUBLISHED_PROCEDURE",
+          "channel_ids": [
+            "svc.health.technical_access.public.service"
+          ]
+        },
+        {
+          "id": "svc.health.technical_access.guide.step.6",
+          "title_ar": "إرسال الشكوى عند جاهزيتها",
+          "title_en": "Submit the complaint when ready",
+          "description_ar": "يصف الدليل التقييم بعد إنشاء التذكرة.",
+          "description_en": "The guide places evaluation after ticket creation.",
+          "verification_status": "Verified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.public.moh.guide"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "دليل 937 العام المنشور؛ لا يوسع النطاق التقني المعتمد ولا يثبت كل مشغل أو حالة.",
+          "scope_en": "Published general 937 guide; does not expand the supported technical domain or establish every operator or case.",
+          "order": 6,
+          "kind": "OFFICIAL_PUBLISHED_PROCEDURE",
+          "channel_ids": [
+            "svc.health.technical_access.public.service"
+          ]
+        }
+      ],
+      "information": [
+        {
+          "id": "fld.health.01",
+          "title_ar": "مقدم الخدمة",
+          "title_en": "Service provider",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.health.technical_access"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 1,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.health.02",
+          "title_ar": "القطاع",
+          "title_en": "Sector",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.health.technical_access"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 2,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.health.03",
+          "title_ar": "المدينة",
+          "title_en": "City",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.health.technical_access"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 3,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.health.04",
+          "title_ar": "مشغل الخدمة",
+          "title_en": "Service operator",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.health.technical_access"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 4,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.health.05",
+          "title_ar": "نوع التذكرة",
+          "title_en": "Ticket type",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.health.technical_access"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 5,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.health.06",
+          "title_ar": "وصف المشكلة",
+          "title_en": "Problem description",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.health.technical_access"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 6,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.health.07",
+          "title_ar": "وصف الملف",
+          "title_en": "File description",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.health.technical_access"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 7,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.health.08",
+          "title_ar": "المرفقات",
+          "title_en": "Attachments",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.health.technical_access"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 8,
+          "kind": "FILE_UPLOAD"
+        },
+        {
+          "id": "svc.health.technical_access.guide.beneficiary",
+          "title_ar": "هل تخصك الشكوى؟",
+          "title_en": "Does the complaint concern you?",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Verified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.public.moh.guide"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "دليل 937 العام المنشور؛ لا يوسع النطاق التقني المعتمد ولا يثبت كل مشغل أو حالة.",
+          "scope_en": "Published general 937 guide; does not expand the supported technical domain or establish every operator or case.",
+          "order": null,
+          "kind": "BENEFICIARY_SELECTOR"
+        },
+        {
+          "id": "svc.health.technical_access.guide.other.beneficiary",
+          "title_ar": "بيانات المستفيد الآخر",
+          "title_en": "Other beneficiary details",
+          "description_ar": "يذكر الدليل الهوية وتاريخ الميلاد.",
+          "description_en": "The guide requests identity and birth date.",
+          "verification_status": "Verified",
+          "requirement_status": "CONDITIONAL",
+          "source_ids": [
+            "source.public.moh.guide"
+          ],
+          "conditions_ar": "عند اختيار أن الشكوى تخص مستفيدًا آخر.",
+          "conditions_en": "When the complaint concerns another beneficiary.",
+          "scope_ar": "دليل 937 العام المنشور؛ لا يوسع النطاق التقني المعتمد ولا يثبت كل مشغل أو حالة.",
+          "scope_en": "Published general 937 guide; does not expand the supported technical domain or establish every operator or case.",
+          "order": null,
+          "kind": "CONDITIONAL_FIELDS"
+        },
+        {
+          "id": "svc.health.technical_access.report.details",
+          "title_ar": "الحقول التقنية المبلّغ عنها",
+          "title_en": "Reported technical-detail fields",
+          "description_ar": "ورد مقدم الخدمة والقطاع والمدينة والمشغل ونوع التذكرة ووصف المشكلة؛ إلزام كل حقل غير مثبت.",
+          "description_en": "The report lists provider, sector, city, operator, ticket type and description; individual requirement markers are unproven.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.report.health"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "خطوات ومعلومات عامة من صفحة الخدمة؛ قد تختلف تفاصيل النموذج بحسب الحالة.",
+          "scope_en": "General information from the service page; form details may vary by case.",
+          "order": null,
+          "kind": "REPORTED_FORM_STRUCTURE"
+        }
+      ],
+      "documents": [
+        {
+          "id": "svc.health.technical_access.historical.documents.1",
+          "title_ar": "مرفقات داعمة",
+          "title_en": "Supporting attachments",
+          "description_ar": "الحد المرصود: 16 MB.",
+          "description_en": "Recorded limit: 16 MB.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.health.technical_access"
+          ],
+          "conditions_ar": "لا يثبت اسم وثيقة محددة أو إلزام المرفق في كل مسار.",
+          "conditions_en": "Does not establish a named document or a requirement for every path.",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": null,
+          "kind": "HISTORICAL_ATTACHMENT_POLICY"
+        }
+      ],
+      "eligibility": [
+        {
+          "id": "svc.health.technical_access.eligibility.unknown",
+          "title_ar": "الأهلية التفصيلية غير موثقة",
+          "title_en": "Detailed eligibility is not documented",
+          "description_ar": "ملاءمة موضوع الشكوى لا تثبت أهلية مقدمها رسميًا.",
+          "description_en": "A complaint-topic match does not establish official applicant eligibility.",
+          "verification_status": "Missing",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.health.technical_access"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": null
+        }
+      ],
+      "channels": [
+        {
+          "id": "svc.health.technical_access.channel.historical",
+          "title_ar": "رابط الخدمة المسجل سابقًا",
+          "title_en": "Previously recorded service entry",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.health.technical_access"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": null,
+          "kind": "WEB_FORM",
+          "url": "https://937.moh.gov.sa/tickets/create"
+        },
+        {
+          "id": "svc.health.technical_access.public.service",
+          "title_ar": "خدمة 937",
+          "title_en": "937 service",
+          "description_ar": "الصفحة الرسمية تحيل إلى منصة 937.",
+          "description_en": "The official page links to the 937 platform.",
+          "verification_status": "Verified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.public.moh.937"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "خطوات ومعلومات عامة من صفحة الخدمة؛ قد تختلف تفاصيل النموذج بحسب الحالة.",
+          "scope_en": "General information from the service page; form details may vary by case.",
+          "order": null,
+          "kind": "WEBSITE",
+          "url": "https://937.moh.gov.sa/"
+        },
+        {
+          "id": "svc.health.technical_access.public.support",
+          "title_ar": "مركز 937",
+          "title_en": "937 call centre",
+          "description_ar": "دعم على مدار الساعة عبر 937.",
+          "description_en": "Support is available through 937 around the clock.",
+          "verification_status": "Verified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.public.moh.937"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "خطوات ومعلومات عامة من صفحة الخدمة؛ قد تختلف تفاصيل النموذج بحسب الحالة.",
+          "scope_en": "General information from the service page; form details may vary by case.",
+          "order": null,
+          "kind": "PHONE_SUPPORT"
+        }
+      ],
+      "drafting_guidance": [],
+      "service_id": "svc.health.technical_access",
+      "authority_id": "auth.moh",
+      "ai_submission_support": {
+        "verification_status": "Unverified",
+        "status": "UNKNOWN",
+        "source_ids": [
+          "source.historical.health.technical_access"
+        ]
+      },
+      "gaps": [
+        {
+          "id": "svc.health.technical_access.gap.eligibility",
+          "title_ar": "شروط الأهلية",
+          "title_en": "Eligibility rules",
+          "reason_ar": "لا توجد قائمة أهلية مكتملة موثقة لكل حالة.",
+          "reason_en": "No complete eligibility rules are documented for every case."
+        },
+        {
+          "id": "svc.health.technical_access.gap.final",
+          "title_ar": "المرحلة النهائية",
+          "title_en": "Final submission stage",
+          "reason_ar": "لم يُنفذ إرسال حكومي أو اختبار ما بعده؛ لا تُفترض نتيجة الإرسال أو رقم مرجعي.",
+          "reason_en": "No government submission or post-submission test was performed; do not assume a receipt or reference number."
+        },
+        {
+          "id": "svc.health.technical_access.gap.automation",
+          "title_ar": "دعم التقديم الآلي",
+          "title_en": "Automated submission support",
+          "reason_ar": "وجود نموذج أو إمكان الوصول إليه لا يثبت السماح بالتقديم الآلي.",
+          "reason_en": "A visible or accessible form does not establish permission for automated submission."
+        },
+        {
+          "id": "svc.health.technical_access.gap.report.completeness",
+          "title_ar": "تفاصيل النموذج الحالي",
+          "title_en": "Current form details",
+          "reason_ar": "التقرير الجديد لم يثبت إلزام كل حقل أو حدًا للأحرف؛ الدليل العام لا يحسم كل مسار تقني.",
+          "reason_en": "The new report does not establish every required marker or a character limit; the general guide does not establish every technical branch."
+        }
+      ]
+    },
+    {
+      "prerequisites": [
+        {
+          "id": "svc.investment.service_contact.prerequisite.1",
+          "title_ar": "اختيار شكوى وإكمال بيانات نموذج التواصل",
+          "title_en": "Choose Reason For Contact = Complaint and complete contact form fields",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.service_contact"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": null
+        }
+      ],
+      "steps": [
+        {
+          "id": "svc.investment.service_contact.historical.step.1",
+          "title_ar": "مرحلة سابقة: نموذج تواصل الاستثمار",
+          "title_en": "Invest Saudi Contact Us",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Open official Invest Saudi Contact Us page.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.service_contact"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 1,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.investment.service_contact.historical.step.2",
+          "title_ar": "مرحلة سابقة: نموذج تواصل الاستثمار",
+          "title_en": "Invest Saudi Contact Us",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Fill contact form.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.service_contact"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 2,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.investment.service_contact.historical.step.3",
+          "title_ar": "مرحلة سابقة: نموذج تواصل الاستثمار",
+          "title_en": "Invest Saudi Contact Us",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Select investment type (Local Investment / Foreign Investment).",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.service_contact"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 3,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.investment.service_contact.historical.step.4",
+          "title_ar": "مرحلة سابقة: نموذج تواصل الاستثمار",
+          "title_en": "Invest Saudi Contact Us",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Enter personal/contact details.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.service_contact"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 4,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.investment.service_contact.historical.step.5",
+          "title_ar": "مرحلة سابقة: نموذج تواصل الاستثمار",
+          "title_en": "Invest Saudi Contact Us",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Choose Reason For Contact = Complaint.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.service_contact"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 5,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.investment.service_contact.historical.step.6",
+          "title_ar": "مرحلة سابقة: نموذج تواصل الاستثمار",
+          "title_en": "Invest Saudi Contact Us",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Select Category.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.service_contact"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 6,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.investment.service_contact.historical.step.7",
+          "title_ar": "مرحلة سابقة: نموذج تواصل الاستثمار",
+          "title_en": "Invest Saudi Contact Us",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Select Sub-Category.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.service_contact"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 7,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.investment.service_contact.historical.step.8",
+          "title_ar": "مرحلة سابقة: نموذج تواصل الاستثمار",
+          "title_en": "Invest Saudi Contact Us",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Enter message.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.service_contact"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 8,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.investment.service_contact.historical.step.9",
+          "title_ar": "مرحلة سابقة: نموذج تواصل الاستثمار",
+          "title_en": "Invest Saudi Contact Us",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Optionally upload supporting file.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.service_contact"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 9,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.investment.service_contact.historical.step.10",
+          "title_ar": "مرحلة سابقة: نموذج تواصل الاستثمار",
+          "title_en": "Invest Saudi Contact Us",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Accept Terms & Conditions / Privacy Policy consent.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.service_contact"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 10,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.investment.service_contact.historical.step.11",
+          "title_ar": "مرحلة سابقة: نموذج تواصل الاستثمار",
+          "title_en": "Invest Saudi Contact Us",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "reCAPTCHA protection is present.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.service_contact"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 11,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.investment.service_contact.historical.step.12",
+          "title_ar": "مرحلة سابقة: نموذج تواصل الاستثمار",
+          "title_en": "Invest Saudi Contact Us",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Final visible action is Submit.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.service_contact"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 12,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.investment.service_contact.historical.step.13",
+          "title_ar": "مرحلة سابقة: نموذج تواصل الاستثمار",
+          "title_en": "Invest Saudi Contact Us",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "No separate review screen was visible before submission.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.service_contact"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 13,
+          "kind": "HISTORICAL_OBSERVATION"
+        }
+      ],
+      "information": [
+        {
+          "id": "fld.investment.contact_01",
+          "title_ar": "نوع الاستثمار",
+          "title_en": "Select Investment Type",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.service_contact"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 1,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.investment.contact_02",
+          "title_ar": "الموضوع",
+          "title_en": "Subject",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.service_contact"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 2,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.investment.contact_03",
+          "title_ar": "الاسم الأول",
+          "title_en": "First Name",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.service_contact"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 3,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.investment.contact_04",
+          "title_ar": "اسم العائلة",
+          "title_en": "Last Name",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.service_contact"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 4,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.investment.contact_05",
+          "title_ar": "البريد الإلكتروني",
+          "title_en": "Email Address",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.service_contact"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 5,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.investment.contact_06",
+          "title_ar": "رمز الدولة",
+          "title_en": "Country code selector",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.service_contact"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 6,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.investment.contact_07",
+          "title_ar": "رقم الجوال",
+          "title_en": "Enter Mobile Number",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.service_contact"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 7,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.investment.contact_08",
+          "title_ar": "سبب التواصل",
+          "title_en": "Reason For Contact",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.service_contact"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 8,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.investment.contact_09",
+          "title_ar": "الفئة",
+          "title_en": "Select Category",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.service_contact"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 9,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.investment.contact_10",
+          "title_ar": "الفئة الفرعية",
+          "title_en": "Select Sub-Category",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.service_contact"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 10,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.investment.contact_11",
+          "title_ar": "الرسالة",
+          "title_en": "Your Message",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.service_contact"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 11,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.investment.contact_12",
+          "title_ar": "رفع ملف",
+          "title_en": "Upload File",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "OPTIONAL",
+          "source_ids": [
+            "source.historical.investment.service_contact"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 12,
+          "kind": "FILE_UPLOAD"
+        },
+        {
+          "id": "fld.investment.contact_13",
+          "title_ar": "الموافقة",
+          "title_en": "Consent checkbox",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.service_contact"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 13,
+          "kind": "CONSENT"
+        }
+      ],
+      "documents": [
+        {
+          "id": "svc.investment.service_contact.historical.documents.1",
+          "title_ar": "مرفقات داعمة",
+          "title_en": "Supporting attachments",
+          "description_ar": "الصيغ المرصودة سابقًا: JPEG, PNG, PDF, DOC, PPT, XLS. الحد المرصود: 9 MB.",
+          "description_en": "Previously recorded formats: JPEG, PNG, PDF, DOC, PPT, XLS. Recorded limit: 9 MB.",
+          "verification_status": "Unverified",
+          "requirement_status": "OPTIONAL",
+          "source_ids": [
+            "source.historical.investment.service_contact"
+          ],
+          "conditions_ar": "لا يثبت اسم وثيقة محددة أو إلزام المرفق في كل مسار.",
+          "conditions_en": "Does not establish a named document or a requirement for every path.",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": null,
+          "kind": "HISTORICAL_ATTACHMENT_POLICY"
+        },
+        {
+          "id": "svc.investment.service_contact.report.upload",
+          "title_ar": "قيود رفع مبلّغ عنها",
+          "title_en": "Reported upload limits",
+          "description_ar": "أورد التقرير حد 9 MB وصيغًا متعددة؛ لم تظهر في المراجعة العامة الحالية.",
+          "description_en": "The report states a 9 MB limit and several formats; these were not exposed in the current public review.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.report.investment"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "خطوات ومعلومات عامة من صفحة الخدمة؛ قد تختلف تفاصيل النموذج بحسب الحالة.",
+          "scope_en": "General information from the service page; form details may vary by case.",
+          "order": null,
+          "kind": "REPORTED_ATTACHMENT_POLICY"
+        }
+      ],
+      "eligibility": [
+        {
+          "id": "svc.investment.service_contact.eligibility.unknown",
+          "title_ar": "الأهلية التفصيلية غير موثقة",
+          "title_en": "Detailed eligibility is not documented",
+          "description_ar": "ملاءمة موضوع الشكوى لا تثبت أهلية مقدمها رسميًا.",
+          "description_en": "A complaint-topic match does not establish official applicant eligibility.",
+          "verification_status": "Missing",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.service_contact"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": null
+        }
+      ],
+      "channels": [
+        {
+          "id": "svc.investment.service_contact.channel.historical",
+          "title_ar": "رابط الخدمة المسجل سابقًا",
+          "title_en": "Previously recorded service entry",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.service_contact"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": null,
+          "kind": "WEB_FORM",
+          "url": "https://investsaudi.sa/contact-us"
+        },
+        {
+          "id": "svc.investment.service_contact.public.referral",
+          "title_ar": "إحالة شكاوى الخدمة",
+          "title_en": "Service complaint referral",
+          "description_ar": "تحيل صفحة النزاهة الشكاوى الخدمية إلى تواصل الاستثمار.",
+          "description_en": "The integrity page refers service complaints to investor contact.",
+          "verification_status": "Verified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.public.misa.integrity"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "خطوات ومعلومات عامة من صفحة الخدمة؛ قد تختلف تفاصيل النموذج بحسب الحالة.",
+          "scope_en": "General information from the service page; form details may vary by case.",
+          "order": null,
+          "kind": "WEBSITE",
+          "url": "https://investsaudi.sa/contact-us"
+        }
+      ],
+      "drafting_guidance": [],
+      "service_id": "svc.investment.service_contact",
+      "authority_id": "auth.misa",
+      "ai_submission_support": {
+        "verification_status": "Unverified",
+        "status": "UNKNOWN",
+        "source_ids": [
+          "source.historical.investment.service_contact"
+        ]
+      },
+      "gaps": [
+        {
+          "id": "svc.investment.service_contact.gap.eligibility",
+          "title_ar": "شروط الأهلية",
+          "title_en": "Eligibility rules",
+          "reason_ar": "لا توجد قائمة أهلية مكتملة موثقة لكل حالة.",
+          "reason_en": "No complete eligibility rules are documented for every case."
+        },
+        {
+          "id": "svc.investment.service_contact.gap.final",
+          "title_ar": "المرحلة النهائية",
+          "title_en": "Final submission stage",
+          "reason_ar": "لم يُنفذ إرسال حكومي أو اختبار ما بعده؛ لا تُفترض نتيجة الإرسال أو رقم مرجعي.",
+          "reason_en": "No government submission or post-submission test was performed; do not assume a receipt or reference number."
+        },
+        {
+          "id": "svc.investment.service_contact.gap.automation",
+          "title_ar": "دعم التقديم الآلي",
+          "title_en": "Automated submission support",
+          "reason_ar": "وجود نموذج أو إمكان الوصول إليه لا يثبت السماح بالتقديم الآلي.",
+          "reason_en": "A visible or accessible form does not establish permission for automated submission."
+        },
+        {
+          "id": "svc.investment.service_contact.gap.current.form",
+          "title_ar": "حقول النموذج العام",
+          "title_en": "Current public-form fields",
+          "reason_ar": "المصدر العام المحال إليه لم يعرض حقول النموذج في هذه المراجعة؛ ادعاءات التقرير عن 9 MB والفئات تبقى غير متحققة.",
+          "reason_en": "The referred public page did not expose form fields in this review; report claims about 9 MB and categories remain unverified."
+        }
+      ]
+    },
+    {
+      "prerequisites": [
+        {
+          "id": "svc.investment.integrity.public.consent",
+          "title_ar": "الإقراران",
+          "title_en": "Two acknowledgements",
+          "description_ar": "يتطلب النموذج الإقرارين المعروضين.",
+          "description_en": "The form requires both displayed acknowledgements.",
+          "verification_status": "Verified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.public.misa.integrity"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "خطوات ومعلومات عامة من صفحة الخدمة؛ قد تختلف تفاصيل النموذج بحسب الحالة.",
+          "scope_en": "General information from the service page; form details may vary by case.",
+          "order": null,
+          "kind": "CONSENT",
+          "channel_ids": [
+            "svc.investment.integrity.public.form"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "id": "svc.investment.integrity.historical.step.1",
+          "title_ar": "مرحلة سابقة: نموذج بلاغات الاستثمار",
+          "title_en": "MISA Complaints",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Open and inspect the integrity/violations form",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.integrity"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 1,
+          "kind": "HISTORICAL_OBSERVATION"
+        }
+      ],
+      "information": [
+        {
+          "id": "fld.investment.integrity_01",
+          "title_ar": "الاسم الكامل",
+          "title_en": "Full Name",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.integrity"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 1,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.investment.integrity_02",
+          "title_ar": "البريد الإلكتروني",
+          "title_en": "Email",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.integrity"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 2,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.investment.integrity_03",
+          "title_ar": "الهاتف",
+          "title_en": "Phone",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.integrity"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 3,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.investment.integrity_04",
+          "title_ar": "الهوية أو الإقامة",
+          "title_en": "National ID/Iqama",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.integrity"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 4,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.investment.integrity_05",
+          "title_ar": "اللقب المهني",
+          "title_en": "Title",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.integrity"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 5,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.investment.integrity_06",
+          "title_ar": "معلومات جهة العمل",
+          "title_en": "Employer Information",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.integrity"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 6,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.investment.integrity_07",
+          "title_ar": "اسم الجهة",
+          "title_en": "Entity name",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.integrity"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 7,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.investment.integrity_08",
+          "title_ar": "نوع البلاغ",
+          "title_en": "Type of Complaint",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.integrity"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 8,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.investment.integrity_09",
+          "title_ar": "تفاصيل البلاغ",
+          "title_en": "Complaint Details",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.integrity"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 9,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.investment.integrity_10",
+          "title_ar": "المستندات الداعمة",
+          "title_en": "Supporting Documents",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.integrity"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 10,
+          "kind": "FILE_UPLOAD"
+        },
+        {
+          "id": "fld.investment.integrity_consent_1",
+          "title_ar": "الإقرار الأول",
+          "title_en": "Consent declaration 1",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.integrity"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": null,
+          "kind": "CONSENT"
+        },
+        {
+          "id": "fld.investment.integrity_consent_2",
+          "title_ar": "الإقرار الثاني",
+          "title_en": "Consent declaration 2",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.integrity"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": null,
+          "kind": "CONSENT"
+        },
+        {
+          "id": "svc.investment.integrity.public.field.1",
+          "title_ar": "الاسم الكامل",
+          "title_en": "Full name",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Verified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.public.misa.integrity"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "تسميات وعلامات إلزام ظاهرة في الصفحة العامة؛ الحالات المخفية أو الشرطية غير مختبرة.",
+          "scope_en": "Labels and required markers exposed on the public page; hidden or conditional states were not tested.",
+          "order": 1,
+          "kind": "PUBLIC_FORM_FIELD"
+        },
+        {
+          "id": "svc.investment.integrity.public.field.2",
+          "title_ar": "الهاتف",
+          "title_en": "Phone",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Verified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.public.misa.integrity"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "تسميات وعلامات إلزام ظاهرة في الصفحة العامة؛ الحالات المخفية أو الشرطية غير مختبرة.",
+          "scope_en": "Labels and required markers exposed on the public page; hidden or conditional states were not tested.",
+          "order": 2,
+          "kind": "PUBLIC_FORM_FIELD"
+        },
+        {
+          "id": "svc.investment.integrity.public.field.3",
+          "title_ar": "الهوية أو الإقامة",
+          "title_en": "National ID or Iqama",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Verified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.public.misa.integrity"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "تسميات وعلامات إلزام ظاهرة في الصفحة العامة؛ الحالات المخفية أو الشرطية غير مختبرة.",
+          "scope_en": "Labels and required markers exposed on the public page; hidden or conditional states were not tested.",
+          "order": 3,
+          "kind": "PUBLIC_FORM_FIELD"
+        },
+        {
+          "id": "svc.investment.integrity.public.field.4",
+          "title_ar": "اللقب المهني",
+          "title_en": "Professional title",
+          "description_ar": "توضح الصفحة مثالًا للقب؛ ليس عنوان الشكوى.",
+          "description_en": "The page shows a professional-title example; this is not the complaint subject.",
+          "verification_status": "Verified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.public.misa.integrity",
+            "source.public.misa.ar"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "تسميات وعلامات إلزام ظاهرة في الصفحة العامة؛ الحالات المخفية أو الشرطية غير مختبرة.",
+          "scope_en": "Labels and required markers exposed on the public page; hidden or conditional states were not tested.",
+          "order": 4,
+          "kind": "PUBLIC_FORM_FIELD"
+        },
+        {
+          "id": "svc.investment.integrity.public.field.5",
+          "title_ar": "جهة العمل",
+          "title_en": "Employer information",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Verified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.public.misa.integrity"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "تسميات وعلامات إلزام ظاهرة في الصفحة العامة؛ الحالات المخفية أو الشرطية غير مختبرة.",
+          "scope_en": "Labels and required markers exposed on the public page; hidden or conditional states were not tested.",
+          "order": 5,
+          "kind": "PUBLIC_FORM_FIELD"
+        },
+        {
+          "id": "svc.investment.integrity.public.field.6",
+          "title_ar": "اسم الجهة",
+          "title_en": "Entity name",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Verified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.public.misa.integrity"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "تسميات وعلامات إلزام ظاهرة في الصفحة العامة؛ الحالات المخفية أو الشرطية غير مختبرة.",
+          "scope_en": "Labels and required markers exposed on the public page; hidden or conditional states were not tested.",
+          "order": 6,
+          "kind": "PUBLIC_FORM_FIELD"
+        },
+        {
+          "id": "svc.investment.integrity.public.field.7",
+          "title_ar": "نوع البلاغ",
+          "title_en": "Report type",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Verified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.public.misa.integrity"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "تسميات وعلامات إلزام ظاهرة في الصفحة العامة؛ الحالات المخفية أو الشرطية غير مختبرة.",
+          "scope_en": "Labels and required markers exposed on the public page; hidden or conditional states were not tested.",
+          "order": 7,
+          "kind": "PUBLIC_FORM_FIELD"
+        },
+        {
+          "id": "svc.investment.integrity.public.field.8",
+          "title_ar": "تفاصيل البلاغ",
+          "title_en": "Report details",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Verified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.public.misa.integrity"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "تسميات وعلامات إلزام ظاهرة في الصفحة العامة؛ الحالات المخفية أو الشرطية غير مختبرة.",
+          "scope_en": "Labels and required markers exposed on the public page; hidden or conditional states were not tested.",
+          "order": 8,
+          "kind": "PUBLIC_FORM_FIELD"
+        },
+        {
+          "id": "svc.investment.integrity.public.email",
+          "title_ar": "البريد الإلكتروني",
+          "title_en": "Email",
+          "description_ar": "ظهر دون علامة إلزام؛ لا يُحسم كاختياري.",
+          "description_en": "No required marker was exposed; optionality is unconfirmed.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.public.misa.integrity"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "خطوات ومعلومات عامة من صفحة الخدمة؛ قد تختلف تفاصيل النموذج بحسب الحالة.",
+          "scope_en": "General information from the service page; form details may vary by case.",
+          "order": null,
+          "kind": "PUBLIC_FORM_FIELD"
+        }
+      ],
+      "documents": [
+        {
+          "id": "svc.investment.integrity.historical.documents.1",
+          "title_ar": "مرفقات داعمة",
+          "title_en": "Supporting attachments",
+          "description_ar": "تفاصيل المستندات غير مكتملة في التوثيق السابق.",
+          "description_en": "Document details are incomplete in historical documentation.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.integrity"
+          ],
+          "conditions_ar": "لا يثبت اسم وثيقة محددة أو إلزام المرفق في كل مسار.",
+          "conditions_en": "Does not establish a named document or a requirement for every path.",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": null,
+          "kind": "HISTORICAL_ATTACHMENT_POLICY"
+        },
+        {
+          "id": "svc.investment.integrity.public.upload",
+          "title_ar": "ملفات داعمة",
+          "title_en": "Supporting files",
+          "description_ar": "الحد المعروض: 8 MB؛ الإلزام غير محسوم.",
+          "description_en": "Displayed maximum: 8 MB; requirement unknown.",
+          "verification_status": "Verified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.public.misa.integrity"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "خطوات ومعلومات عامة من صفحة الخدمة؛ قد تختلف تفاصيل النموذج بحسب الحالة.",
+          "scope_en": "General information from the service page; form details may vary by case.",
+          "order": null,
+          "kind": "PUBLIC_ATTACHMENT_POLICY"
+        }
+      ],
+      "eligibility": [
+        {
+          "id": "svc.investment.integrity.eligibility.unknown",
+          "title_ar": "الأهلية التفصيلية غير موثقة",
+          "title_en": "Detailed eligibility is not documented",
+          "description_ar": "ملاءمة موضوع الشكوى لا تثبت أهلية مقدمها رسميًا.",
+          "description_en": "A complaint-topic match does not establish official applicant eligibility.",
+          "verification_status": "Missing",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.integrity"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": null
+        }
+      ],
+      "channels": [
+        {
+          "id": "svc.investment.integrity.channel.historical",
+          "title_ar": "رابط الخدمة المسجل سابقًا",
+          "title_en": "Previously recorded service entry",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.investment.integrity"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": null,
+          "kind": "WEB_FORM",
+          "url": "https://misa.gov.sa/complaints/"
+        },
+        {
+          "id": "svc.investment.integrity.public.form",
+          "title_ar": "نموذج بلاغات النزاهة",
+          "title_en": "Integrity reporting form",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Verified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.public.misa.integrity"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "خطوات ومعلومات عامة من صفحة الخدمة؛ قد تختلف تفاصيل النموذج بحسب الحالة.",
+          "scope_en": "General information from the service page; form details may vary by case.",
+          "order": null,
+          "kind": "WEB_FORM",
+          "url": "https://misa.gov.sa/complaints/"
+        }
+      ],
+      "drafting_guidance": [],
+      "service_id": "svc.investment.integrity",
+      "authority_id": "auth.misa",
+      "ai_submission_support": {
+        "verification_status": "Unverified",
+        "status": "UNKNOWN",
+        "source_ids": [
+          "source.historical.investment.integrity"
+        ]
+      },
+      "gaps": [
+        {
+          "id": "svc.investment.integrity.gap.eligibility",
+          "title_ar": "شروط الأهلية",
+          "title_en": "Eligibility rules",
+          "reason_ar": "لا توجد قائمة أهلية مكتملة موثقة لكل حالة.",
+          "reason_en": "No complete eligibility rules are documented for every case."
+        },
+        {
+          "id": "svc.investment.integrity.gap.final",
+          "title_ar": "المرحلة النهائية",
+          "title_en": "Final submission stage",
+          "reason_ar": "لم يُنفذ إرسال حكومي أو اختبار ما بعده؛ لا تُفترض نتيجة الإرسال أو رقم مرجعي.",
+          "reason_en": "No government submission or post-submission test was performed; do not assume a receipt or reference number."
+        },
+        {
+          "id": "svc.investment.integrity.gap.automation",
+          "title_ar": "دعم التقديم الآلي",
+          "title_en": "Automated submission support",
+          "reason_ar": "وجود نموذج أو إمكان الوصول إليه لا يثبت السماح بالتقديم الآلي.",
+          "reason_en": "A visible or accessible form does not establish permission for automated submission."
+        },
+        {
+          "id": "svc.investment.integrity.gap.id.validation",
+          "title_ar": "قواعد التحقق من الهوية",
+          "title_en": "Identity validation rules",
+          "reason_ar": "النص المساعد العام غير واضح؛ لم تُختبر قاعدة التحقق الفعلية.",
+          "reason_en": "The public helper text is unclear; actual validation was not tested."
+        }
+      ]
+    },
+    {
+      "prerequisites": [
+        {
+          "id": "svc.education.complaint.prerequisite.1",
+          "title_ar": "تسجيل الدخول إلى منصة شكاوى التعليم",
+          "title_en": "Authenticated login to the Ministry of Education complaint platform",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Unverified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.historical.education.complaint"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": null
+        },
+        {
+          "id": "svc.education.complaint.prerequisite.2",
+          "title_ar": "تجهيز المستندات أو المرفقات الداعمة",
+          "title_en": "Prepare supporting documents/attachments",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Unverified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.historical.education.complaint"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": null
+        },
+        {
+          "id": "svc.education.complaint.prerequisite.3",
+          "title_ar": "قبول الإقرار أو الشروط",
+          "title_en": "Accept the declaration/terms",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Unverified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.historical.education.complaint"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": null
+        },
+        {
+          "id": "svc.education.complaint.public.access",
+          "title_ar": "الوصول عبر تواصل",
+          "title_en": "Access via Tawasul",
+          "description_ar": "الصفحة العامة توجه إلى تواصل أو تطبيقه.",
+          "description_en": "The public instructions direct users to Tawasul or its app.",
+          "verification_status": "Verified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.public.moe.ar",
+            "source.public.moe.en"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "خطوات ومعلومات عامة من صفحة الخدمة؛ قد تختلف تفاصيل النموذج بحسب الحالة.",
+          "scope_en": "General information from the service page; form details may vary by case.",
+          "order": null,
+          "channel_ids": [
+            "svc.education.complaint.public.portal"
+          ]
+        },
+        {
+          "id": "svc.education.complaint.report.nafath",
+          "title_ar": "تقرير عن الدخول عبر نفاذ",
+          "title_en": "Reported Nafath login",
+          "description_ar": "ذكر التقرير نفاذ؛ لم أختبر تسجيل الدخول.",
+          "description_en": "The report names Nafath; sign-in was not tested.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.report.education"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "خطوات ومعلومات عامة من صفحة الخدمة؛ قد تختلف تفاصيل النموذج بحسب الحالة.",
+          "scope_en": "General information from the service page; form details may vary by case.",
+          "order": null,
+          "kind": "REPORTED_AUTHENTICATION"
+        }
+      ],
+      "steps": [
+        {
+          "id": "svc.education.complaint.historical.step.1",
+          "title_ar": "مرحلة سابقة: صفحة شكوى التعليم",
+          "title_en": "Ministry Of Education | File a Complaint",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Open official Ministry of Education complaint service page",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.education.complaint"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 1,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.education.complaint.historical.step.2",
+          "title_ar": "مرحلة سابقة: معلومات الخدمة",
+          "title_en": "Service information tabs",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Open Steps and Documents sections",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.education.complaint"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 2,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.education.complaint.historical.step.3",
+          "title_ar": "مرحلة سابقة: بدء الخدمة",
+          "title_en": "Start service",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Click Start the service",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.education.complaint"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 3,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.education.complaint.historical.step.4",
+          "title_ar": "مرحلة سابقة: الدخول إلى منصة الشكاوى",
+          "title_en": "Complaint platform login",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Click تسجيل الدخول",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.education.complaint"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 4,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.education.complaint.historical.step.5",
+          "title_ar": "مرحلة سابقة: لوحة الشكاوى بعد الدخول",
+          "title_en": "Authenticated complaint dashboard/form",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Open new complaint ticket type شكوى",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.education.complaint"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 5,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.education.complaint.historical.step.6",
+          "title_ar": "مرحلة سابقة: تصنيف الشكوى",
+          "title_en": "Complaint classification",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Select applicant role, entity, education administration, region, and main service",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.education.complaint"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 6,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.education.complaint.historical.step.7",
+          "title_ar": "مرحلة سابقة: محتوى الشكوى",
+          "title_en": "Complaint content",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Enter ticket title and complaint text",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.education.complaint"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 7,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.education.complaint.historical.step.8",
+          "title_ar": "مرحلة سابقة: المرفقات والإقرار",
+          "title_en": "Attachments and declaration",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Review attachment rules and accept declaration",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.education.complaint"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 8,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.education.complaint.historical.step.9",
+          "title_ar": "مرحلة سابقة: شاشة المراجعة",
+          "title_en": "Review screen",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Proceed to review",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.education.complaint"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 9,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.education.complaint.public.step.1",
+          "title_ar": "فتح تواصل أو تطبيقه",
+          "title_en": "Open Tawasul or its app",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Verified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.public.moe.ar",
+            "source.public.moe.en"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "خطوات ومعلومات عامة من صفحة الخدمة؛ قد تختلف تفاصيل النموذج بحسب الحالة.",
+          "scope_en": "General information from the service page; form details may vary by case.",
+          "order": 1,
+          "kind": "OFFICIAL_PUBLISHED_PROCEDURE",
+          "channel_ids": [
+            "svc.education.complaint.public.portal"
+          ]
+        },
+        {
+          "id": "svc.education.complaint.public.step.2",
+          "title_ar": "اختيار تقديم تذكرة شكوى",
+          "title_en": "Choose a complaint ticket",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Verified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.public.moe.ar",
+            "source.public.moe.en"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "خطوات ومعلومات عامة من صفحة الخدمة؛ قد تختلف تفاصيل النموذج بحسب الحالة.",
+          "scope_en": "General information from the service page; form details may vary by case.",
+          "order": 2,
+          "kind": "OFFICIAL_PUBLISHED_PROCEDURE",
+          "channel_ids": [
+            "svc.education.complaint.public.portal"
+          ]
+        },
+        {
+          "id": "svc.education.complaint.public.step.3",
+          "title_ar": "إدخال بيانات مقدم الطلب",
+          "title_en": "Enter applicant information",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Verified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.public.moe.ar",
+            "source.public.moe.en"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "خطوات ومعلومات عامة من صفحة الخدمة؛ قد تختلف تفاصيل النموذج بحسب الحالة.",
+          "scope_en": "General information from the service page; form details may vary by case.",
+          "order": 3,
+          "kind": "OFFICIAL_PUBLISHED_PROCEDURE",
+          "channel_ids": [
+            "svc.education.complaint.public.portal"
+          ]
+        },
+        {
+          "id": "svc.education.complaint.public.step.4",
+          "title_ar": "اختيار الجهة المستقبلة",
+          "title_en": "Choose the receiving entity",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Verified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.public.moe.ar",
+            "source.public.moe.en"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "خطوات ومعلومات عامة من صفحة الخدمة؛ قد تختلف تفاصيل النموذج بحسب الحالة.",
+          "scope_en": "General information from the service page; form details may vary by case.",
+          "order": 4,
+          "kind": "OFFICIAL_PUBLISHED_PROCEDURE",
+          "channel_ids": [
+            "svc.education.complaint.public.portal"
+          ]
+        },
+        {
+          "id": "svc.education.complaint.public.step.5",
+          "title_ar": "تقديم التذكرة عند جاهزيتها",
+          "title_en": "Submit the ticket when ready",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Verified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.public.moe.ar",
+            "source.public.moe.en"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "خطوات ومعلومات عامة من صفحة الخدمة؛ قد تختلف تفاصيل النموذج بحسب الحالة.",
+          "scope_en": "General information from the service page; form details may vary by case.",
+          "order": 5,
+          "kind": "OFFICIAL_PUBLISHED_PROCEDURE",
+          "channel_ids": [
+            "svc.education.complaint.public.portal"
+          ]
+        }
+      ],
+      "information": [
+        {
+          "id": "fld.education.01",
+          "title_ar": "صفة مقدم التذكرة",
+          "title_en": "Applicant role",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.historical.education.complaint"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 1,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.education.02",
+          "title_ar": "الجهة",
+          "title_en": "Entity",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.historical.education.complaint"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 2,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.education.03",
+          "title_ar": "إدارة التعليم",
+          "title_en": "Education administration",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.historical.education.complaint"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 3,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.education.04",
+          "title_ar": "المقر (المنطقة)",
+          "title_en": "Region / Headquarters",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.historical.education.complaint"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 4,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.education.05",
+          "title_ar": "الخدمة الرئيسية",
+          "title_en": "Main service",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.historical.education.complaint"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 5,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.education.06",
+          "title_ar": "عنوان التذكرة",
+          "title_en": "Ticket title",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.historical.education.complaint"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 6,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.education.07",
+          "title_ar": "نص التذكرة",
+          "title_en": "Ticket text / Complaint description",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.historical.education.complaint"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 7,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.education.08",
+          "title_ar": "المرفق",
+          "title_en": "Attachment",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.historical.education.complaint"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 8,
+          "kind": "FILE_UPLOAD"
+        },
+        {
+          "id": "fld.education.09",
+          "title_ar": "التعهد و الإقرار",
+          "title_en": "Declaration and acknowledgment",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.historical.education.complaint"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 9,
+          "kind": "CONSENT"
+        },
+        {
+          "id": "svc.education.complaint.report.characterlimits",
+          "title_ar": "حدود العنوان والنص المبلّغ عنها",
+          "title_en": "Reported title and text limits",
+          "description_ar": "أورد التقرير 100 حرف للعنوان و1000 للنص؛ لا تحقق حالي مستقل.",
+          "description_en": "The report states 100 title and 1,000 body characters; not independently verified.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.report.education"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "خطوات ومعلومات عامة من صفحة الخدمة؛ قد تختلف تفاصيل النموذج بحسب الحالة.",
+          "scope_en": "General information from the service page; form details may vary by case.",
+          "order": null,
+          "kind": "REPORTED_CONSTRAINTS"
+        }
+      ],
+      "documents": [
+        {
+          "id": "svc.education.complaint.historical.documents.1",
+          "title_ar": "مرفقات داعمة",
+          "title_en": "Supporting attachments",
+          "description_ar": "الصيغ المرصودة سابقًا: .jpg, .png, .pdf. الحد المرصود: 5 MB. العدد المرصود: 5.",
+          "description_en": "Previously recorded formats: .jpg, .png, .pdf. Recorded limit: 5 MB. Recorded file count: 5.",
+          "verification_status": "Unverified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.historical.education.complaint"
+          ],
+          "conditions_ar": "لا يثبت اسم وثيقة محددة أو إلزام المرفق في كل مسار.",
+          "conditions_en": "Does not establish a named document or a requirement for every path.",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": null,
+          "kind": "HISTORICAL_ATTACHMENT_POLICY"
+        },
+        {
+          "id": "svc.education.complaint.public.documents.gap",
+          "title_ar": "لم تُسمّ قائمة مستندات",
+          "title_en": "No named document list",
+          "description_ar": "لا يثبت غياب القائمة إعفاء كل الحالات من المرفقات.",
+          "description_en": "An absent list does not establish that all attachments are optional.",
+          "verification_status": "Missing",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.public.moe.ar"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "خطوات ومعلومات عامة من صفحة الخدمة؛ قد تختلف تفاصيل النموذج بحسب الحالة.",
+          "scope_en": "General information from the service page; form details may vary by case.",
+          "order": null,
+          "kind": "UNSPECIFIED_DOCUMENT_LIST"
+        },
+        {
+          "id": "svc.education.complaint.report.requirement.disagreement",
+          "title_ar": "تباين بشأن إلزام المرفق",
+          "title_en": "Attachment requirement disagreement",
+          "description_ar": "التوثيق السابق رصد الإلزام؛ التقرير الجديد يسميه مشروطًا دون شرط محدد.",
+          "description_en": "Historical documentation observed a requirement; the new report calls it conditional without a defined condition.",
+          "verification_status": "Conflicting",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.education.complaint",
+            "source.report.education"
+          ],
+          "conditions_ar": "يلزم تحديد المسار والفئة وحالة النموذج قبل حسم الإلزام.",
+          "conditions_en": "The branch, applicant category and form state must be established before deciding the requirement.",
+          "scope_ar": "خطوات ومعلومات عامة من صفحة الخدمة؛ قد تختلف تفاصيل النموذج بحسب الحالة.",
+          "scope_en": "General information from the service page; form details may vary by case.",
+          "order": null,
+          "kind": "SOURCE_DISAGREEMENT"
+        }
+      ],
+      "eligibility": [
+        {
+          "id": "svc.education.complaint.eligibility.unknown",
+          "title_ar": "الأهلية التفصيلية غير موثقة",
+          "title_en": "Detailed eligibility is not documented",
+          "description_ar": "ملاءمة موضوع الشكوى لا تثبت أهلية مقدمها رسميًا.",
+          "description_en": "A complaint-topic match does not establish official applicant eligibility.",
+          "verification_status": "Missing",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.education.complaint"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": null
+        }
+      ],
+      "channels": [
+        {
+          "id": "svc.education.complaint.channel.historical",
+          "title_ar": "رابط الخدمة المسجل سابقًا",
+          "title_en": "Previously recorded service entry",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.education.complaint"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": null,
+          "kind": "WEB_FORM",
+          "url": "https://tawasul.moe.gov.sa/Pages/eTickets?Complaint"
+        },
+        {
+          "id": "svc.education.complaint.public.portal",
+          "title_ar": "بوابة تواصل",
+          "title_en": "Tawasul portal",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Verified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.public.moe.ar",
+            "source.public.moe.en"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "خطوات ومعلومات عامة من صفحة الخدمة؛ قد تختلف تفاصيل النموذج بحسب الحالة.",
+          "scope_en": "General information from the service page; form details may vary by case.",
+          "order": null,
+          "kind": "WEBSITE",
+          "url": "https://tawasul.moe.gov.sa/"
+        },
+        {
+          "id": "svc.education.complaint.public.support",
+          "title_ar": "مركز رعاية المستفيدين",
+          "title_en": "Beneficiary support",
+          "description_ar": "عند تعذر الخدمة إلكترونيًا: 19996.",
+          "description_en": "If electronic access fails: 19996.",
+          "verification_status": "Verified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.public.moe.ar",
+            "source.public.moe.en"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "خطوات ومعلومات عامة من صفحة الخدمة؛ قد تختلف تفاصيل النموذج بحسب الحالة.",
+          "scope_en": "General information from the service page; form details may vary by case.",
+          "order": null,
+          "kind": "PHONE_SUPPORT"
+        }
+      ],
+      "drafting_guidance": [
+        {
+          "id": "svc.education.complaint.public.applicant",
+          "title_ar": "تحديد مقدم الطلب والجهة",
+          "title_en": "Identify applicant and recipient",
+          "description_ar": "أدخل بيانات مقدم الطلب وحدد الجهة المعنية.",
+          "description_en": "Provide applicant information and select the responsible entity.",
+          "verification_status": "Verified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.public.moe.ar"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "خطوات ومعلومات عامة من صفحة الخدمة؛ قد تختلف تفاصيل النموذج بحسب الحالة.",
+          "scope_en": "General information from the service page; form details may vary by case.",
+          "order": null,
+          "kind": "OFFICIAL_PUBLISHED_CONTENT"
+        }
+      ],
+      "service_id": "svc.education.complaint",
+      "authority_id": "auth.moe",
+      "ai_submission_support": {
+        "verification_status": "Unverified",
+        "status": "UNKNOWN",
+        "source_ids": [
+          "source.historical.education.complaint"
+        ]
+      },
+      "gaps": [
+        {
+          "id": "svc.education.complaint.gap.eligibility",
+          "title_ar": "شروط الأهلية",
+          "title_en": "Eligibility rules",
+          "reason_ar": "لا توجد قائمة أهلية مكتملة موثقة لكل حالة.",
+          "reason_en": "No complete eligibility rules are documented for every case."
+        },
+        {
+          "id": "svc.education.complaint.gap.final",
+          "title_ar": "المرحلة النهائية",
+          "title_en": "Final submission stage",
+          "reason_ar": "لم يُنفذ إرسال حكومي أو اختبار ما بعده؛ لا تُفترض نتيجة الإرسال أو رقم مرجعي.",
+          "reason_en": "No government submission or post-submission test was performed; do not assume a receipt or reference number."
+        },
+        {
+          "id": "svc.education.complaint.gap.automation",
+          "title_ar": "دعم التقديم الآلي",
+          "title_en": "Automated submission support",
+          "reason_ar": "وجود نموذج أو إمكان الوصول إليه لا يثبت السماح بالتقديم الآلي.",
+          "reason_en": "A visible or accessible form does not establish permission for automated submission."
+        },
+        {
+          "id": "svc.education.complaint.gap.attachment.required",
+          "title_ar": "إلزام المرفق",
+          "title_en": "Attachment requirement",
+          "reason_ar": "لا يمكن تعميم حالة الاختبار أو تصنيف التقرير المشروط على جميع المتقدمين.",
+          "reason_en": "Neither the old test state nor the report’s conditional label establishes all applicants’ requirements."
+        }
+      ]
+    },
+    {
+      "prerequisites": [
+        {
+          "id": "svc.hrsd.call_center_19911.prerequisite.1",
+          "title_ar": "تسجيل الدخول إلى بوابة صفحة المستفيد",
+          "title_en": "Sign in to the Beneficiary Page",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Unverified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.historical.hrsd.call_center_19911"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": null
+        },
+        {
+          "id": "svc.hrsd.call_center_19911.public.account",
+          "title_ar": "حساب للوصول",
+          "title_en": "Account access",
+          "description_ar": "الصفحة العامة تذكر حساب الوزارة أو أبشر.",
+          "description_en": "The public page lists a Ministry or Absher account.",
+          "verification_status": "Verified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.public.hrsd.client"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "متطلب عام لصفحة المستفيد؛ لا يثبت تفاصيل حساب المسار الفرعي.",
+          "scope_en": "General Beneficiary Page prerequisite; does not establish sub-service account details.",
+          "order": null,
+          "channel_ids": [
+            "svc.hrsd.call_center_19911.public.portal"
+          ]
+        },
+        {
+          "id": "svc.hrsd.call_center_19911.guide.nafath",
+          "title_ar": "الدخول عبر نفاذ",
+          "title_en": "Nafath sign-in",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Verified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.public.hrsd.guide"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "دليل صفحة المستفيد العام؛ لم يُعد اختبار فرع شكاوى موظفي 19911 نفسه.",
+          "scope_en": "General Beneficiary Page guide; the 19911 staff-complaint branch itself was not re-tested.",
+          "order": null,
+          "channel_ids": [
+            "svc.hrsd.call_center_19911.public.portal"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "id": "svc.hrsd.call_center_19911.historical.step.1",
+          "title_ar": "مرحلة سابقة: الموقع الرسمي للوزارة",
+          "title_en": "Ministry website",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Open the official Ministry website.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.hrsd.call_center_19911"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 1,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.hrsd.call_center_19911.historical.step.2",
+          "title_ar": "مرحلة سابقة: نهتم بكم",
+          "title_en": "Beneficiary care section",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Open the beneficiary care section.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.hrsd.call_center_19911"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 2,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.hrsd.call_center_19911.historical.step.3",
+          "title_ar": "مرحلة سابقة: صفحة خدمة صفحة المستفيد",
+          "title_en": "Beneficiary service page",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Open the service information and its service link.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.hrsd.call_center_19911"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 3,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.hrsd.call_center_19911.historical.step.4",
+          "title_ar": "مرحلة سابقة: بوابة صفحة المستفيد",
+          "title_en": "Beneficiary portal",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Open the portal and sign in.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.hrsd.call_center_19911"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 4,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.hrsd.call_center_19911.historical.step.5",
+          "title_ar": "مرحلة سابقة: لوحة المستفيد",
+          "title_en": "Beneficiary dashboard",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Open services after signing in.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.hrsd.call_center_19911"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 5,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.hrsd.call_center_19911.historical.step.6",
+          "title_ar": "مرحلة سابقة: قسم الشكاوى",
+          "title_en": "Complaints section",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Open complaints.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.hrsd.call_center_19911"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 6,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.hrsd.call_center_19911.historical.step.7",
+          "title_ar": "مرحلة سابقة: تصنيف العمل",
+          "title_en": "Work classification",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Select the Work classification.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.hrsd.call_center_19911"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 7,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.hrsd.call_center_19911.historical.step.8",
+          "title_ar": "مرحلة سابقة: خدمة شكاوى على موظفي مراكز الاتصال 19911",
+          "title_en": "19911 staff complaint service",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Select the documented 19911 staff complaint service.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.hrsd.call_center_19911"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 8,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.hrsd.call_center_19911.historical.step.9",
+          "title_ar": "مرحلة سابقة: إنشاء طلب جديد",
+          "title_en": "New request",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "Choose a new request.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.hrsd.call_center_19911"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 9,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.hrsd.call_center_19911.historical.step.10",
+          "title_ar": "مرحلة سابقة: نموذج الشكوى الفعلي",
+          "title_en": "Complaint form",
+          "description_ar": "وصف مرصود سابقًا؛ راجع واجهة الخدمة الحالية قبل التنفيذ.",
+          "description_en": "The historical record inspected region, city and form labels.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.hrsd.call_center_19911"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 10,
+          "kind": "HISTORICAL_OBSERVATION"
+        },
+        {
+          "id": "svc.hrsd.call_center_19911.guide.step.1",
+          "title_ar": "تسجيل الدخول عبر نفاذ",
+          "title_en": "Sign in through Nafath",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Verified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.public.hrsd.guide"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "دليل صفحة المستفيد العام؛ لم يُعد اختبار فرع شكاوى موظفي 19911 نفسه.",
+          "scope_en": "General Beneficiary Page guide; the 19911 staff-complaint branch itself was not re-tested.",
+          "order": 1,
+          "kind": "OFFICIAL_PUBLISHED_PROCEDURE",
+          "channel_ids": [
+            "svc.hrsd.call_center_19911.public.portal"
+          ]
+        },
+        {
+          "id": "svc.hrsd.call_center_19911.guide.step.2",
+          "title_ar": "اختيار المستفيد وقبول الشروط",
+          "title_en": "Choose beneficiary type and terms",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Verified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.public.hrsd.guide"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "دليل صفحة المستفيد العام؛ لم يُعد اختبار فرع شكاوى موظفي 19911 نفسه.",
+          "scope_en": "General Beneficiary Page guide; the 19911 staff-complaint branch itself was not re-tested.",
+          "order": 2,
+          "kind": "OFFICIAL_PUBLISHED_PROCEDURE",
+          "channel_ids": [
+            "svc.hrsd.call_center_19911.public.portal"
+          ]
+        },
+        {
+          "id": "svc.hrsd.call_center_19911.guide.step.3",
+          "title_ar": "الخدمات ثم الشكاوى",
+          "title_en": "Open services, then complaints",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Verified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.public.hrsd.guide"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "دليل صفحة المستفيد العام؛ لم يُعد اختبار فرع شكاوى موظفي 19911 نفسه.",
+          "scope_en": "General Beneficiary Page guide; the 19911 staff-complaint branch itself was not re-tested.",
+          "order": 3,
+          "kind": "OFFICIAL_PUBLISHED_PROCEDURE",
+          "channel_ids": [
+            "svc.hrsd.call_center_19911.public.portal"
+          ]
+        },
+        {
+          "id": "svc.hrsd.call_center_19911.guide.step.4",
+          "title_ar": "اختيار القطاع والتصنيفات",
+          "title_en": "Choose sector and classifications",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Verified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.public.hrsd.guide"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "دليل صفحة المستفيد العام؛ لم يُعد اختبار فرع شكاوى موظفي 19911 نفسه.",
+          "scope_en": "General Beneficiary Page guide; the 19911 staff-complaint branch itself was not re-tested.",
+          "order": 4,
+          "kind": "OFFICIAL_PUBLISHED_PROCEDURE",
+          "channel_ids": [
+            "svc.hrsd.call_center_19911.public.portal"
+          ]
+        },
+        {
+          "id": "svc.hrsd.call_center_19911.guide.step.5",
+          "title_ar": "تعبئة الطلب",
+          "title_en": "Complete the request",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Verified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.public.hrsd.guide"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "دليل صفحة المستفيد العام؛ لم يُعد اختبار فرع شكاوى موظفي 19911 نفسه.",
+          "scope_en": "General Beneficiary Page guide; the 19911 staff-complaint branch itself was not re-tested.",
+          "order": 5,
+          "kind": "OFFICIAL_PUBLISHED_PROCEDURE",
+          "channel_ids": [
+            "svc.hrsd.call_center_19911.public.portal"
+          ]
+        },
+        {
+          "id": "svc.hrsd.call_center_19911.guide.step.6",
+          "title_ar": "إرسال الطلب عند جاهزيته",
+          "title_en": "Submit the request when ready",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Verified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.public.hrsd.guide"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "دليل صفحة المستفيد العام؛ لم يُعد اختبار فرع شكاوى موظفي 19911 نفسه.",
+          "scope_en": "General Beneficiary Page guide; the 19911 staff-complaint branch itself was not re-tested.",
+          "order": 6,
+          "kind": "OFFICIAL_PUBLISHED_PROCEDURE",
+          "channel_ids": [
+            "svc.hrsd.call_center_19911.public.portal"
+          ]
+        },
+        {
+          "id": "svc.hrsd.call_center_19911.report.19911.branch",
+          "title_ar": "فرع شكاوى موظفي 19911 المبلّغ عنه",
+          "title_en": "Reported 19911 staff branch",
+          "description_ar": "ذكر التقرير قطاع العمل وفرع موظفي 19911؛ لا يثبت حقوله التفصيلية.",
+          "description_en": "The report names the Work-sector 19911 staff branch; detailed fields are not established.",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.report.hrsd"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "خطوات ومعلومات عامة من صفحة الخدمة؛ قد تختلف تفاصيل النموذج بحسب الحالة.",
+          "scope_en": "General information from the service page; form details may vary by case.",
+          "order": null,
+          "kind": "REPORTED_BRANCH"
+        }
+      ],
+      "information": [
+        {
+          "id": "fld.hrsd.01",
+          "title_ar": "بريد التواصل",
+          "title_en": "Contact Email",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "OPTIONAL",
+          "source_ids": [
+            "source.historical.hrsd.call_center_19911"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 1,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.hrsd.02",
+          "title_ar": "جوال التواصل",
+          "title_en": "Contact Mobile",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.historical.hrsd.call_center_19911"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 2,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.hrsd.03",
+          "title_ar": "المنطقة",
+          "title_en": "Region",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.historical.hrsd.call_center_19911"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 3,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.hrsd.04",
+          "title_ar": "المدينة",
+          "title_en": "City",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.historical.hrsd.call_center_19911"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 4,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.hrsd.05",
+          "title_ar": "معلومات البلاغ",
+          "title_en": "Complaint Information",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.historical.hrsd.call_center_19911"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 5,
+          "kind": "INPUT"
+        },
+        {
+          "id": "fld.hrsd.06",
+          "title_ar": "رفع المرفقات",
+          "title_en": "Upload Attachments",
+          "description_ar": "اسم حقل من النموذج السابق؛ لم تُحفظ أي قيمة شخصية.",
+          "description_en": "Field label from historical form documentation; no personal field value is retained.",
+          "verification_status": "Unverified",
+          "requirement_status": "OPTIONAL",
+          "source_ids": [
+            "source.historical.hrsd.call_center_19911"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": 6,
+          "kind": "FILE_UPLOAD"
+        },
+        {
+          "id": "svc.hrsd.call_center_19911.guide.field.1",
+          "title_ar": "بريد التواصل",
+          "title_en": "Contact email",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Verified",
+          "requirement_status": "OPTIONAL",
+          "source_ids": [
+            "source.public.hrsd.guide"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "دليل صفحة المستفيد العام؛ لم يُعد اختبار فرع شكاوى موظفي 19911 نفسه.",
+          "scope_en": "General Beneficiary Page guide; the 19911 staff-complaint branch itself was not re-tested.",
+          "order": 1,
+          "kind": "UNIFIED_FORM_FIELD"
+        },
+        {
+          "id": "svc.hrsd.call_center_19911.guide.field.2",
+          "title_ar": "جوال التواصل",
+          "title_en": "Contact mobile",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Verified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.public.hrsd.guide"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "دليل صفحة المستفيد العام؛ لم يُعد اختبار فرع شكاوى موظفي 19911 نفسه.",
+          "scope_en": "General Beneficiary Page guide; the 19911 staff-complaint branch itself was not re-tested.",
+          "order": 2,
+          "kind": "UNIFIED_FORM_FIELD"
+        },
+        {
+          "id": "svc.hrsd.call_center_19911.guide.field.3",
+          "title_ar": "المنطقة",
+          "title_en": "Region",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Verified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.public.hrsd.guide"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "دليل صفحة المستفيد العام؛ لم يُعد اختبار فرع شكاوى موظفي 19911 نفسه.",
+          "scope_en": "General Beneficiary Page guide; the 19911 staff-complaint branch itself was not re-tested.",
+          "order": 3,
+          "kind": "UNIFIED_FORM_FIELD"
+        },
+        {
+          "id": "svc.hrsd.call_center_19911.guide.field.4",
+          "title_ar": "تفاصيل الطلب",
+          "title_en": "Request details",
+          "description_ar": "حتى 2000 حرف في النموذج الموحد.",
+          "description_en": "Up to 2,000 characters in the unified form.",
+          "verification_status": "Verified",
+          "requirement_status": "MANDATORY",
+          "source_ids": [
+            "source.public.hrsd.guide"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "دليل صفحة المستفيد العام؛ لم يُعد اختبار فرع شكاوى موظفي 19911 نفسه.",
+          "scope_en": "General Beneficiary Page guide; the 19911 staff-complaint branch itself was not re-tested.",
+          "order": 4,
+          "kind": "UNIFIED_FORM_FIELD"
+        }
+      ],
+      "documents": [
+        {
+          "id": "svc.hrsd.call_center_19911.historical.documents.1",
+          "title_ar": "مرفقات داعمة",
+          "title_en": "Supporting attachments",
+          "description_ar": "الصيغ المرصودة سابقًا: .jpg, .png, .pdf. الحد المرصود: 3 MB.",
+          "description_en": "Previously recorded formats: .jpg, .png, .pdf. Recorded limit: 3 MB.",
+          "verification_status": "Unverified",
+          "requirement_status": "OPTIONAL",
+          "source_ids": [
+            "source.historical.hrsd.call_center_19911"
+          ],
+          "conditions_ar": "لا يثبت اسم وثيقة محددة أو إلزام المرفق في كل مسار.",
+          "conditions_en": "Does not establish a named document or a requirement for every path.",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": null,
+          "kind": "HISTORICAL_ATTACHMENT_POLICY"
+        },
+        {
+          "id": "svc.hrsd.call_center_19911.public.supporting",
+          "title_ar": "مستندات مؤيدة إن وجدت",
+          "title_en": "Supporting documents if available",
+          "description_ar": "أرفق المتاح المؤيد للشكوى.",
+          "description_en": "Attach available supporting evidence.",
+          "verification_status": "Verified",
+          "requirement_status": "CONDITIONAL",
+          "source_ids": [
+            "source.public.hrsd.client"
+          ],
+          "conditions_ar": "إن وجدت مستندات مؤيدة؛ لم تُسم وثيقة محددة.",
+          "conditions_en": "If supporting evidence exists; no specific document is named.",
+          "scope_ar": "خطوات ومعلومات عامة من صفحة الخدمة؛ قد تختلف تفاصيل النموذج بحسب الحالة.",
+          "scope_en": "General information from the service page; form details may vary by case.",
+          "order": null
+        },
+        {
+          "id": "svc.hrsd.call_center_19911.guide.upload",
+          "title_ar": "المرفقات في النموذج الموحد",
+          "title_en": "Unified-form attachments",
+          "description_ar": "اختيارية؛ JPG وPNG وPDF؛ الحد المنشور 3 MB.",
+          "description_en": "Optional; JPG, PNG, PDF; published maximum 3 MB.",
+          "verification_status": "Verified",
+          "requirement_status": "OPTIONAL",
+          "source_ids": [
+            "source.public.hrsd.guide"
+          ],
+          "conditions_ar": "ضوابط النموذج الموحد، لا نموذج التصعيد ذي الحد المختلف.",
+          "conditions_en": "Unified form rules, not the escalation form with a different limit.",
+          "scope_ar": "دليل صفحة المستفيد العام؛ لم يُعد اختبار فرع شكاوى موظفي 19911 نفسه.",
+          "scope_en": "General Beneficiary Page guide; the 19911 staff-complaint branch itself was not re-tested.",
+          "order": null,
+          "kind": "OFFICIAL_ATTACHMENT_POLICY"
+        }
+      ],
+      "eligibility": [
+        {
+          "id": "svc.hrsd.call_center_19911.eligibility.unknown",
+          "title_ar": "الأهلية التفصيلية غير موثقة",
+          "title_en": "Detailed eligibility is not documented",
+          "description_ar": "ملاءمة موضوع الشكوى لا تثبت أهلية مقدمها رسميًا.",
+          "description_en": "A complaint-topic match does not establish official applicant eligibility.",
+          "verification_status": "Missing",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.hrsd.call_center_19911"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": null
+        }
+      ],
+      "channels": [
+        {
+          "id": "svc.hrsd.call_center_19911.channel.historical",
+          "title_ar": "رابط الخدمة المسجل سابقًا",
+          "title_en": "Previously recorded service entry",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Unverified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.historical.hrsd.call_center_19911"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "مسار مرصود في توثيق سابق؛ يحتاج تحققًا حاليًا ولا يعمم على جميع الحالات.",
+          "scope_en": "Previously documented path; requires current verification and does not apply to every case.",
+          "order": null,
+          "kind": "WEB_FORM",
+          "url": "https://selfservice.hrsd.gov.sa/complaints"
+        },
+        {
+          "id": "svc.hrsd.call_center_19911.public.portal",
+          "title_ar": "بوابة صفحة المستفيد",
+          "title_en": "Beneficiary Page portal",
+          "description_ar": "",
+          "description_en": "",
+          "verification_status": "Verified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.public.hrsd.client"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "خطوات ومعلومات عامة من صفحة الخدمة؛ قد تختلف تفاصيل النموذج بحسب الحالة.",
+          "scope_en": "General information from the service page; form details may vary by case.",
+          "order": null,
+          "kind": "WEBSITE",
+          "url": "https://selfservice.hrsd.gov.sa/"
+        }
+      ],
+      "drafting_guidance": [
+        {
+          "id": "svc.hrsd.call_center_19911.public.accuracy",
+          "title_ar": "بيانات شكوى صحيحة",
+          "title_en": "Accurate complaint information",
+          "description_ar": "اتبع دليل المستخدم عند تعبئة بيانات الشكوى.",
+          "description_en": "Follow the user guide when completing complaint data.",
+          "verification_status": "Verified",
+          "requirement_status": "UNKNOWN",
+          "source_ids": [
+            "source.public.hrsd.client"
+          ],
+          "conditions_ar": "",
+          "conditions_en": "",
+          "scope_ar": "خطوات ومعلومات عامة من صفحة الخدمة؛ قد تختلف تفاصيل النموذج بحسب الحالة.",
+          "scope_en": "General information from the service page; form details may vary by case.",
+          "order": null,
+          "kind": "OFFICIAL_PUBLISHED_CONTENT"
+        }
+      ],
+      "service_id": "svc.hrsd.call_center_19911",
+      "authority_id": "auth.hrsd",
+      "ai_submission_support": {
+        "verification_status": "Unverified",
+        "status": "UNKNOWN",
+        "source_ids": [
+          "source.historical.hrsd.call_center_19911"
+        ]
+      },
+      "gaps": [
+        {
+          "id": "svc.hrsd.call_center_19911.gap.eligibility",
+          "title_ar": "شروط الأهلية",
+          "title_en": "Eligibility rules",
+          "reason_ar": "لا توجد قائمة أهلية مكتملة موثقة لكل حالة.",
+          "reason_en": "No complete eligibility rules are documented for every case."
+        },
+        {
+          "id": "svc.hrsd.call_center_19911.gap.final",
+          "title_ar": "المرحلة النهائية",
+          "title_en": "Final submission stage",
+          "reason_ar": "لم يُنفذ إرسال حكومي أو اختبار ما بعده؛ لا تُفترض نتيجة الإرسال أو رقم مرجعي.",
+          "reason_en": "No government submission or post-submission test was performed; do not assume a receipt or reference number."
+        },
+        {
+          "id": "svc.hrsd.call_center_19911.gap.automation",
+          "title_ar": "دعم التقديم الآلي",
+          "title_en": "Automated submission support",
+          "reason_ar": "وجود نموذج أو إمكان الوصول إليه لا يثبت السماح بالتقديم الآلي.",
+          "reason_en": "A visible or accessible form does not establish permission for automated submission."
+        }
+      ]
+    }
+  ]
+}

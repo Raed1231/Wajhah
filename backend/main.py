@@ -10,6 +10,8 @@ from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 from body_limits import RequestBodyLimit
 from conversation import attach_conversation, install_follow_up
+from complaint_drafts import router as drafts_router
+from service_guidance import router as guidance_router
 from request_deadline import RequestDeadline
 
 from ai_gateway import close_client, generate
@@ -38,8 +40,7 @@ service_id يكون null لغير MATCHED. لا تولّد روابط؛ يحلّ
 الأسئلة التوضيحية إرشادات توليدية، وليست شروطًا رسمية موثقة. أجب بالعربية.
 '''
 SYSTEM_INSTRUCTION = INSTRUCTIONS + '\nالمعرفة الموثقة:\n' + json.dumps(PROMPT_KNOWLEDGE, ensure_ascii=False, separators=(',', ':'))
-# Opt-in until a live accuracy/latency comparison passes. The default preserves
-# the previously demonstrated extraction-then-routing workflow.
+# Default to extraction then routing until the combined flow passes live checks.
 USE_COMBINED_ATTACHMENTS = os.getenv('WAJHAH_COMBINED_ATTACHMENTS', 'false').lower() == 'true'
 
 
@@ -88,19 +89,18 @@ async def invalid_request_handler(request: Request, error: RequestValidationErro
     if any(item['type'] == 'string_too_long' and item['loc'][-1] in {'message', 'complaint'} for item in errors):
         code = 'MESSAGE_TOO_LONG'
     problem = ServiceError(code, 422, 'راجع بيانات الشكوى وسجل المحادثة والمرفق.')
-    # Do not echo Pydantic input values or parser internals in public errors.
+    # Never echo validation input or parser details.
     return JSONResponse(status_code=422, content={'detail': problem.detail(request_id())})
 
 
 @app.get('/health')
 async def health():
-    # Liveness only: a healthy API does not establish upstream model capacity.
+    # Liveness is not provider readiness.
     return {'status': 'ok', 'project': 'Wajhah'}
 
 
 def bounded_history(conversation):
-    # Keep the original complaint/extracted attachment facts and recent turns.
-    # Returned context is immediately reusable by any client, not only React.
+    # Preserve original complaint/attachment context in reusable bounded history.
     first, tail = conversation[0], conversation[1:]
     if len(first['text']) > MAX_HISTORY_TEXT:
         raise ServiceError('AI_INVALID_RESPONSE', 502, 'سياق المرفق يتجاوز الحد المسموح. حاول مجددًا.', True)
@@ -162,6 +162,8 @@ async def route_complaint(request: ComplaintRequest):
 
 app.include_router(attachments_router)
 app.include_router(analysis_router)
+app.include_router(guidance_router)
+app.include_router(drafts_router)
 
 
 @app.post('/route-with-attachment')
@@ -192,7 +194,7 @@ async def route_with_attachment(complaint: str = Form(...), file: UploadFile = F
                                               json.dumps({'untrusted_conversation': conversation}, ensure_ascii=False, separators=(',', ':')), 'ai_routing')
         routing = render_routing(routing_decision, conversation)
         result = {'status': routing['status'], 'routing': routing, 'attachment_analysis': analysis}
-        result['conversation'] = attach_conversation(routing, conversation)['conversation']
+        result['conversation'] = attach_conversation(routing, conversation, input_kind='attachment')['conversation']
         return result
     finally:
         await file.close()

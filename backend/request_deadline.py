@@ -73,8 +73,7 @@ class RequestDeadline:
             logger.warning('request_deadline request_id=%s source=request_deadline budget_s=%.1f',
                            request_id(), REQUEST_TIMEOUT_SECONDS if self.timeout is None else self.timeout)
             if response_started:
-                # Status cannot change after headers. Terminate the response;
-                # never send a second response-start event.
+                # Headers are already sent; terminate without a second response start.
                 raise _DeadlineExpired('Response deadline exceeded') from None
             error = ServiceError('AI_TIMEOUT', 504, 'انتهت مهلة الطلب. يمكنك إعادة المحاولة.', True)
             await JSONResponse(status_code=504, content={'detail': error.detail(request_id())})(scope, receive, send)

@@ -1,7 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
-import { ACCEPTED_FILES, MAX_MESSAGE_LENGTH, checkHealth, fileError, messageError, safeOfficialUrl, sendComplaint, sendFollowup } from './api'
+import { ACCEPTED_FILES, MAX_MESSAGE_LENGTH, checkHealth, fileError, messageError, safeOfficialUrl, sendComplaint, sendFollowup, generateComplaintDraft, ApiError } from './api'
 import { translations } from './i18n'
 import { startRequestProgress } from './request-state'
+import ServiceGuidance from './ServiceGuidance.jsx'
+import ComplaintDraft from './ComplaintDraft.jsx'
+import { draftContextChanged } from './draft-state.js'
 import './App.css'
 
 const invalidAttachmentCodes = new Set(['fileLarge', 'fileType', 'fileEmpty', 'fileContent', 'invalidPdf', 'encryptedPdf', 'pdfPageLimit', 'invalidImage'])
@@ -60,6 +63,7 @@ function initialLanguage() {
 
 function App() {
   const [language, setLanguage] = useState(initialLanguage)
+  const [languageRevision, setLanguageRevision] = useState(0)
   const [message, setMessage] = useState('')
   const [file, setFile] = useState(null)
   const [errors, setErrors] = useState({})
@@ -76,6 +80,8 @@ function App() {
   const [followupDraft, setFollowupDraft] = useState('')
   const [followupMessages, setFollowupMessages] = useState([])
   const [followupPending, setFollowupPending] = useState(false)
+  const [draftPending, setDraftPending] = useState(false)
+  const [serviceRevision, setServiceRevision] = useState(0)
   const [followupError, setFollowupError] = useState('')
   const [followupRetryable, setFollowupRetryable] = useState(false)
   const [followupNotice, setFollowupNotice] = useState('')
@@ -96,7 +102,8 @@ function App() {
   const currentStep = result ? result.status === 'MATCHED' ? 2 : 1 : 0
   const currentFileError = errors.file || fileError(file)
   const canRetry = errorRetryable || noticeCode === 'timeout'
-  const busy = pending || followupPending
+  const busy = pending || followupPending || draftPending
+  const matchedServiceId = result?.status === 'MATCHED' && typeof result.service_id === 'string' ? result.service_id : ''
 
   useEffect(() => {
     document.documentElement.lang = language
@@ -122,7 +129,7 @@ function App() {
   function reset() {
     if (busyRef.current) return
     setMessage(''); setFile(null); setErrors({}); setErrorCode(''); setErrorRetryable(false); setNoticeCode('')
-    setResult(null); setHistory([]); setTranscript([]); setAnalysis(null); setAttachedName('')
+    setResult(null); setHistory([]); setTranscript([]); setAnalysis(null); setAttachedName(''); setServiceRevision(0)
     setConversation(null); setFollowupDraft(''); setFollowupMessages([]); setFollowupError(''); setFollowupRetryable(false); setFollowupNotice(''); setFollowupTrimmed(false)
     if (fileRef.current) fileRef.current.value = ''
     requestAnimationFrame(() => inputRef.current?.focus())
@@ -154,6 +161,7 @@ function App() {
       const next = continued ? { ...continued.route, conversation: continued.conversation }
         : await sendComplaint({ message, history, file, signal: controller.signal })
       if (controller.signal.aborted) return
+      if (draftContextChanged(result, next, continued?.intent)) setServiceRevision((value) => value + 1)
       setResult(next); setHistory(next.history); setHealth('online')
       setConversation(next.conversation)
       if (next.attachmentAnalysis) setAnalysis(next.attachmentAnalysis)
@@ -174,8 +182,7 @@ function App() {
           setErrorCode(error.code || 'network')
           setErrorRetryable(error.retryable ?? !error.code)
         }
-        // A live backend can report an upstream AI failure. Only a browser
-        // connection failure implies that this health indicator is offline.
+        // Upstream AI errors do not imply a lost connection to the backend.
         if (!error.code || error.code === 'network') setHealth('offline')
       }
     } finally {
@@ -204,6 +211,7 @@ function App() {
     try {
       const next = await sendFollowup({ message: followupDraft, conversationToken: conversation.token, language, signal: controller.signal })
       if (controller.signal.aborted) return
+      if (draftContextChanged(result, next.route, next.intent)) setServiceRevision((value) => value + 1)
       setResult(next.route); setHistory(next.route.history); setConversation(next.conversation); setHealth('online')
       const messages = [...followupMessages, { role: 'user', text: followupDraft.trim() }, { role: 'assistant', text: next.reply }]
       setFollowupMessages(messages.slice(-12))
@@ -224,6 +232,25 @@ function App() {
     }
   }
 
+  async function createDraft(reviewOptions = {}) {
+    if (busyRef.current || !conversation) return null
+    busyRef.current = true
+    setDraftPending(true)
+    const controller = new AbortController()
+    controllerRef.current = controller
+    const stopProgress = startRequestProgress({ onProgress: setProgressPhase, onTimeout: () => controller.abort('timeout'), signal: controller.signal })
+    try {
+      const draft = await generateComplaintDraft({ conversationToken: conversation.token, serviceId: matchedServiceId || null, language, turnCount: conversation.turn_count, signal: controller.signal, ...reviewOptions })
+      if (controller.signal.aborted) throw new ApiError(controller.signal.reason === 'timeout' ? 'timeout' : 'canceled')
+      return draft
+    } catch (error) {
+      if (controller.signal.aborted) throw new ApiError(controller.signal.reason === 'timeout' ? 'timeout' : 'canceled')
+      throw error
+    } finally {
+      stopProgress(); busyRef.current = false; setDraftPending(false); controllerRef.current = null
+    }
+  }
+
   function pickFile(event) {
     const selected = event.target.files?.[0] || null
     setFile(selected); setErrors((previous) => ({ ...previous, file: fileError(selected) })); setErrorCode(''); setErrorRetryable(false); setNoticeCode('')
@@ -237,7 +264,7 @@ function App() {
   const statusText = { MATCHED: t.matched, NEEDS_CLARIFICATION: t.clarification, NOT_SUPPORTED: t.unsupported }
   return <div className="app-shell">
     <a className="skip-link" href="#complaint">{t.skip}</a>
-    <header className="site-header page-width"><a className="brand" href="#" aria-label={t.brand}><span className="brand-mark"><Icon name="compass" size={32} /></span><span><span className="brand-name">{t.brand}</span><span className="brand-note">{t.brandNote}</span></span></a><div className="header-actions"><span className="beta-badge">{t.beta}</span><button className="language-button" type="button" onClick={() => setLanguage((current) => current === 'ar' ? 'en' : 'ar')} aria-label={t.switchLanguage}><Icon name="globe" size={17} /><span lang={language === 'ar' ? 'en' : 'ar'}>{t.language}</span></button></div></header>
+    <header className="site-header page-width"><a className="brand" href="#" aria-label={t.brand}><span className="brand-mark"><Icon name="compass" size={32} /></span><span><span className="brand-name">{t.brand}</span><span className="brand-note">{t.brandNote}</span></span></a><div className="header-actions"><span className="beta-badge">{t.beta}</span><button className="language-button" type="button" onClick={() => { setLanguage((current) => current === 'ar' ? 'en' : 'ar'); setLanguageRevision((value) => value + 1) }} aria-label={t.switchLanguage}><Icon name="globe" size={17} /><span lang={language === 'ar' ? 'en' : 'ar'}>{t.language}</span></button></div></header>
     <main className="page-width">
       <section className="intro" aria-labelledby="page-title"><p className="eyebrow"><span />{t.eyebrow}</p><h1 id="page-title">{t.title}<br /><span>{t.titleAccent}</span></h1><p className="intro-copy">{t.intro}</p><div className="intro-decoration" aria-hidden="true"><Icon name="compass" size={164} /></div></section>
       <ol className="steps" aria-label={language === 'ar' ? 'خطوات التوجيه' : 'Routing steps'}>{t.steps.map((step, index) => <li key={index} className={currentStep === index ? 'active' : ''}><span className="step-number">{String(index + 1).padStart(2, '0')}</span><span>{step}</span></li>)}</ol>
@@ -280,6 +307,10 @@ function App() {
         {analysis && <details className="analysis-panel"><summary>{t.analysis}</summary>{[['summary', t.summary], ['extracted_facts', t.facts], ['missing_information', t.missing], ['unreadable_content', t.unreadable]].map(([key, label]) => analysis[key] ? <div className="analysis-item" key={key}><h3>{label}</h3><AnalysisValue value={analysis[key]} /></div> : null)}</details>}
         {health === 'offline' && <><div className="connection-bar"><span className="connection-dot offline" /><span role="status">{t.healthOffline}</span><button className="text-button" type="button" onClick={() => { setHealth('checking'); setHealthAttempt((value) => value + 1) }}>{t.retry}</button></div><p className="connection-help">{t.offlineHelp}</p></>}{result && <p className="original-language">{t.originalLanguage}</p>}
       </aside></div>
+      {result && <div className="service-tools">
+        {matchedServiceId && <ServiceGuidance serviceId={matchedServiceId} language={language} revision={serviceRevision} t={t} />}
+        {conversation && <ComplaintDraft serviceId={matchedServiceId || null} serviceName={result.service_name || t.draftNoDestination} language={language} languageRevision={languageRevision} revision={serviceRevision} busy={busy} pending={draftPending} processingMessage={t[progressPhase]} onGenerate={createDraft} t={t} />}
+      </div>}
     </main><footer className="site-footer page-width"><span>{t.footer}</span><span>{t.footerNote}</span>{transcript.length > 0 && !finished && <button className="text-button" type="button" onClick={reset} disabled={busy}>{t.newComplaint}</button>}</footer>
   </div>
 }
