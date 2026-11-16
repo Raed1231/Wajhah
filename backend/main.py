@@ -8,6 +8,8 @@ from uuid import uuid4
 from fastapi import FastAPI, File, Form, Request, UploadFile
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
+from pymongo.errors import PyMongoError
+from accounts import close_database, router as accounts_router
 from body_limits import RequestBodyLimit
 from conversation import attach_conversation, install_follow_up
 from complaint_drafts import router as drafts_router
@@ -48,6 +50,7 @@ USE_COMBINED_ATTACHMENTS = os.getenv('WAJHAH_COMBINED_ATTACHMENTS', 'false').low
 async def lifespan(app):
     yield
     await close_client()
+    await close_database()
 
 
 app = FastAPI(title='Wajhah API', lifespan=lifespan)
@@ -80,6 +83,13 @@ async def request_metrics(request: Request, call_next):
 async def service_error_handler(request: Request, error: ServiceError):
     headers = {'Retry-After': '5'} if error.code in {'AI_OVERLOADED', 'AI_RATE_LIMITED'} else None
     return JSONResponse(status_code=error.status, content={'detail': error.detail(request_id())}, headers=headers)
+
+
+@app.exception_handler(PyMongoError)
+async def database_error_handler(request: Request, error: PyMongoError):
+    logger.warning('database_error request_id=%s type=%s', request_id(), type(error).__name__)
+    problem = ServiceError('DATABASE_UNAVAILABLE', 503, 'خدمة الحسابات غير متاحة حاليًا. حاول لاحقًا.', True)
+    return JSONResponse(status_code=503, content={'detail': problem.detail(request_id())})
 
 
 @app.exception_handler(RequestValidationError)
@@ -164,6 +174,7 @@ app.include_router(attachments_router)
 app.include_router(analysis_router)
 app.include_router(guidance_router)
 app.include_router(drafts_router)
+app.include_router(accounts_router)
 
 
 @app.post('/route-with-attachment')

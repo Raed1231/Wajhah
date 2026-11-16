@@ -250,3 +250,20 @@ summary > span { display: inline-grid; place-items: center; min-width: 22px; hei
 .guidance-scope h3, .guidance-scope p, .guidance-selected-channel, .guidance-channel-select { font-size: 12px; line-height: 1.8; }
 .guidance-channel-select { display: grid; gap: 5px; margin-block: 12px 6px; }
 .guidance-channel-select select { max-width: 100%; min-height: 44px; padding-inline: 10px; border: 1px solid var(--border); border-radius: 6px; background: #fff; color: var(--ink); font: inherit; }
+.account-card { max-width: 560px; margin: 40px auto 56px; }
+.account-heading { display: flex; justify-content: space-between; align-items: start; gap: 16px; margin-block-end: 8px; }
+.account-heading p { color: var(--muted); font-size: 13px; line-height: 1.8; margin-block-start: 6px; }
+.account-field { margin-block-start: 18px; }
+.account-field input, .account-field select { display: block; width: 100%; min-height: 46px; background: #fcfdfb; color: var(--ink); border: 1px solid #d5ddd4; border-radius: 10px; padding: 10px 14px; font: inherit; font-size: 14px; }
+.account-field input:focus, .account-field select:focus { border-color: var(--primary); }
+.account-field input:disabled, .account-field select:disabled { color: var(--muted); background: var(--soft); }
+.account-field [aria-invalid='true'] { border-color: #b4493a; }
+.account-hint { color: var(--muted); font-size: 11px; line-height: 1.8; margin-block-start: 7px; }
+.account-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin-block-start: 24px; }
+.account-danger { border-block-start: 1px solid var(--border); margin-block-start: 28px; padding-block-start: 18px; }
+.account-warning { color: #9c3e2f; font-size: 12px; line-height: 1.8; }
+.danger-button { color: #a23e2f; }
+.danger { color: #fff; background: #a23e2f; }
+.danger:hover:not(:disabled) { background: #85301f; }
+.account-button bdi { max-width: 160px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+@media (max-width: 700px) { .account-card { margin-block: 24px 40px; } .account-field input, .account-field select { font-size: 16px; } .account-actions .button { width: 100%; } }

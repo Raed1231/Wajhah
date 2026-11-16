@@ -8,3 +8,5 @@ pydantic==2.14.1
 httpx==0.28.1
 Pillow==12.3.0
 pypdf==6.10.0
+pymongo==4.20.0
+mongomock==4.3.0

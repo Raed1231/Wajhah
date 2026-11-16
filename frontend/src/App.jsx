@@ -5,6 +5,8 @@ import { startRequestProgress } from './request-state'
 import ServiceGuidance from './ServiceGuidance.jsx'
 import ComplaintDraft from './ComplaintDraft.jsx'
 import { draftContextChanged } from './draft-state.js'
+import Account from './Account.jsx'
+import { getProfile, loadSession, saveSession } from './account-api.js'
 import './App.css'
 
 const invalidAttachmentCodes = new Set(['fileLarge', 'fileType', 'fileEmpty', 'fileContent', 'invalidPdf', 'encryptedPdf', 'pdfPageLimit', 'invalidImage'])
@@ -23,6 +25,7 @@ function Icon({ name, size = 22, className = '' }) {
     globe: <><circle cx="12" cy="12" r="9" /><ellipse cx="12" cy="12" rx="4" ry="9" /><path d="M3 12h18" /></>,
     lock: <><rect x="5" y="10" width="14" height="11" rx="2" /><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 5v2" /></>,
     reset: <path d="M3 4v6h6m-6 0a9 9 0 1 1 1 8" />,
+    user: <><circle cx="12" cy="8" r="4" /><path d="M4 21a8 8 0 0 1 16 0" /></>,
   }
   return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className={className}>{paths[name] || paths.compass}</svg>
 }
@@ -89,6 +92,9 @@ function App() {
   const [progressPhase, setProgressPhase] = useState('processing')
   const [health, setHealth] = useState('checking')
   const [healthAttempt, setHealthAttempt] = useState(0)
+  const [session, setSession] = useState(loadSession)
+  const [accountOpen, setAccountOpen] = useState(false)
+  const sessionToken = session?.token
   const inputRef = useRef(null)
   const fileRef = useRef(null)
   const removeFileRef = useRef(null)
@@ -122,9 +128,24 @@ function App() {
   }, [healthAttempt])
   useEffect(() => () => controllerRef.current?.abort('cleanup'), [])
   useEffect(() => {
+    if (!sessionToken) return
+    let active = true
+    getProfile(sessionToken).then((user) => {
+      if (active) updateSession({ token: sessionToken, user })
+    }).catch((error) => {
+      if (active && error.code === 'signedOut') updateSession(null)
+    })
+    return () => { active = false }
+  }, [sessionToken])
+  useEffect(() => {
     const log = followupLogRef.current
     if (log) log.scrollTop = log.scrollHeight
   }, [followupMessages])
+
+  function updateSession(next) {
+    setSession(next)
+    saveSession(next)
+  }
 
   function reset() {
     if (busyRef.current) return
@@ -264,8 +285,9 @@ function App() {
   const statusText = { MATCHED: t.matched, NEEDS_CLARIFICATION: t.clarification, NOT_SUPPORTED: t.unsupported }
   return <div className="app-shell">
     <a className="skip-link" href="#complaint">{t.skip}</a>
-    <header className="site-header page-width"><a className="brand" href="#" aria-label={t.brand}><span className="brand-mark"><Icon name="compass" size={32} /></span><span><span className="brand-name">{t.brand}</span><span className="brand-note">{t.brandNote}</span></span></a><div className="header-actions"><span className="beta-badge">{t.beta}</span><button className="language-button" type="button" onClick={() => { setLanguage((current) => current === 'ar' ? 'en' : 'ar'); setLanguageRevision((value) => value + 1) }} aria-label={t.switchLanguage}><Icon name="globe" size={17} /><span lang={language === 'ar' ? 'en' : 'ar'}>{t.language}</span></button></div></header>
+    <header className="site-header page-width"><a className="brand" href="#" aria-label={t.brand}><span className="brand-mark"><Icon name="compass" size={32} /></span><span><span className="brand-name">{t.brand}</span><span className="brand-note">{t.brandNote}</span></span></a><div className="header-actions"><span className="beta-badge">{t.beta}</span><button className="language-button account-button" type="button" onClick={() => setAccountOpen((open) => !open)} aria-expanded={accountOpen}><Icon name="user" size={17} /><bdi>{session?.user?.name || t.signIn}</bdi></button><button className="language-button" type="button" onClick={() => { setLanguage((current) => current === 'ar' ? 'en' : 'ar'); setLanguageRevision((value) => value + 1) }} aria-label={t.switchLanguage}><Icon name="globe" size={17} /><span lang={language === 'ar' ? 'en' : 'ar'}>{t.language}</span></button></div></header>
     <main className="page-width">
+      {accountOpen ? <Account language={language} t={t} session={session} onSession={updateSession} onClose={() => setAccountOpen(false)} /> : <>
       <section className="intro" aria-labelledby="page-title"><p className="eyebrow"><span />{t.eyebrow}</p><h1 id="page-title">{t.title}<br /><span>{t.titleAccent}</span></h1><p className="intro-copy">{t.intro}</p><div className="intro-decoration" aria-hidden="true"><Icon name="compass" size={164} /></div></section>
       <ol className="steps" aria-label={language === 'ar' ? 'خطوات التوجيه' : 'Routing steps'}>{t.steps.map((step, index) => <li key={index} className={currentStep === index ? 'active' : ''}><span className="step-number">{String(index + 1).padStart(2, '0')}</span><span>{step}</span></li>)}</ol>
       <div className="workspace"><div className="form-column">
@@ -311,6 +333,7 @@ function App() {
         {matchedServiceId && <ServiceGuidance serviceId={matchedServiceId} language={language} revision={serviceRevision} t={t} />}
         {conversation && <ComplaintDraft serviceId={matchedServiceId || null} serviceName={result.service_name || t.draftNoDestination} language={language} languageRevision={languageRevision} revision={serviceRevision} busy={busy} pending={draftPending} processingMessage={t[progressPhase]} onGenerate={createDraft} t={t} />}
       </div>}
+      </>}
     </main><footer className="site-footer page-width"><span>{t.footer}</span><span>{t.footerNote}</span>{transcript.length > 0 && !finished && <button className="text-button" type="button" onClick={reset} disabled={busy}>{t.newComplaint}</button>}</footer>
   </div>
 }
