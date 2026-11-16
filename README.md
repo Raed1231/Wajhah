@@ -8,6 +8,13 @@ The application uses React 19 and Vite on the frontend, FastAPI on the backend, 
 
 | User story | Implemented behavior |
 | --- | --- |
+| US-01 | Create an account with name, email, mobile number, password, and user type (citizen, resident, visitor, or pilgrim). |
+| US-02 | Check registration details on the client and server, with an error for each invalid field. |
+| US-03 | Prevent duplicate accounts with the same email or mobile number. |
+| US-04 | Verify an account with a 6-digit email code before sign-in. |
+| US-05 | Sign in and sign out. |
+| US-06 | View and update the profile name, mobile number, and user type. |
+| US-07 | Delete an account after password confirmation. |
 | US-12 | Submit a free-text complaint with input validation. |
 | US-13 | Optionally upload one attachment. |
 | US-14 | Validate attachment format, size, and parsed contents. |
@@ -18,7 +25,7 @@ The application uses React 19 and Vite on the frontend, FastAPI on the backend, 
 
 The existing post-result conversation also supports questions, fact corrections, and safe reassessment without uploading the original attachment again. These descriptions explain implemented functionality; they are not a guarantee of every live AI answer.
 
-Only the services and scenarios in `backend/wajhah_routing_kb.json` are supported. `NOT_SUPPORTED` means the available KB cannot support a route; it does not establish official ineligibility. Accounts, official complaint drafting, government login, automated submission, portal navigation, and complaint-status tracking are outside this version.
+Only the services and scenarios in `backend/wajhah_routing_kb.json` are supported. `NOT_SUPPORTED` means the available KB cannot support a route; it does not establish official ineligibility. Official complaint drafting, government login, automated submission, portal navigation, and complaint-status tracking are outside this version.
 
 ## Project structure
 
@@ -50,6 +57,7 @@ Wajhah-Sprint1-Final/
 ## Prerequisites
 
 - Python 3.12, Node.js 24, and npm.
+- MongoDB (local server or Atlas) for accounts. Complaint routing works without it.
 - Internet access to install dependencies; a Gemini API key and provider connectivity for live AI requests.
 - No API key, external fonts, Poppler, or ReportLab are needed for the normal offline tests.
 
@@ -74,7 +82,16 @@ For live analysis, copy `backend/.env.example` to `backend/.env` only if no loca
 GEMINI_API_KEY=
 GEMINI_MODEL=gemini-3.5-flash-lite
 WAJHAH_COMBINED_ATTACHMENTS=false
+MONGODB_URI=mongodb://127.0.0.1:27017
+MONGODB_DB=wajhah
+SMTP_HOST=
+SMTP_PORT=587
+SMTP_USER=
+SMTP_PASSWORD=
+SMTP_FROM=
 ```
+
+Accounts are stored in the `users` and `sessions` collections; indexes are created on first use. If `SMTP_HOST` is empty, the verification code is written to the backend log for local development only.
 
 The model and default attachment pipeline are preserved from the working application. Keep the key on the backend: never put it in React, a `VITE_` variable, source code, command history, or Git. Offline tests require no `.env` file.
 
@@ -123,6 +140,13 @@ Service IDs, names, and official links are resolved from the local KB rather tha
 | `POST /analyze-attachment` | Multipart `complaint, file` for attachment analysis. |
 | `POST /route-with-attachment` | Multipart `complaint, file`; returns routing, attachment analysis, and conversation context. |
 | `POST /follow-up` | JSON `{message, conversation_token, language}` for contextual follow-up. |
+| `POST /auth/register` | JSON `{name, email, phone, password, user_type, language}`; creates an unverified account and emails a code. |
+| `POST /auth/verify` | JSON `{email, code}`; activates the account. |
+| `POST /auth/resend-code` | JSON `{email, language}`; sends a new code (once per minute). |
+| `POST /auth/login` | JSON `{email, password}`; returns a session token and the profile. |
+| `POST /auth/logout` | Ends the current session (`Authorization: Bearer <token>`). |
+| `GET /profile`, `PATCH /profile` | View or update `{name, phone, user_type}` (signed in). |
+| `DELETE /profile` | JSON `{password}`; deletes the account and its sessions (signed in). |
 
 The frontend uses `/route` or `/route-with-attachment` initially, then `/follow-up`, including clarification replies. Extracted facts remain available without re-uploading. Once follow-up starts, keep using its conversation token instead of switching back to legacy history, which may omit fact updates. A different attachment requires a new complaint.
 
@@ -132,7 +156,8 @@ Ordinary questions do not automatically reroute a complaint. Fact updates and re
 - Attachment: one non-empty JPG/JPEG/PNG/PDF, at most 5 MiB. PDFs must be unencrypted and contain 1–20 pages; static images are limited to 20 million pixels. Parsed contents and signatures are checked, not only extensions.
 - Conversation: at most 40 follow-ups and 12 fact updates, with bounded recent history. Resource limits reject excessive context instead of silently dropping important facts.
 - The signed conversation token is not encrypted and contains complaint context. Do not share or log it. It expires after two hours and is invalidated by a backend restart. This prototype uses one backend process, not independently keyed workers.
-- Conversation state lives in the current page. Refreshing or resetting clears it; only the language preference is stored locally.
+- Conversation state lives in the current page. Refreshing or resetting clears it; only the language preference and the account session token are stored locally.
+- Passwords are hashed with scrypt. Verification codes expire after 10 minutes and allow 5 attempts. Sessions expire after 7 days.
 
 ## Reliability, privacy, and limitations
 

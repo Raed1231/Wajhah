@@ -13,9 +13,10 @@ class RequestBodyLimit:
             return await self.app(scope, receive, send)
         path = scope.get('path')
         multipart = path in {'/attachments', '/analyze-attachment', '/route-with-attachment'}
-        if scope.get('method') != 'POST' or not (multipart or path in {'/route', '/follow-up', '/complaint-draft'}):
+        account = path.startswith('/auth/') or path == '/profile'
+        if not account and (scope.get('method') != 'POST' or not (multipart or path in {'/route', '/follow-up', '/complaint-draft'})):
             return await self.app(scope, receive, send)
-        limit = 6 * 1024 * 1024 if multipart else 512 * 1024 if path in {'/follow-up', '/complaint-draft'} else 256 * 1024
+        limit = 16 * 1024 if account else 6 * 1024 * 1024 if multipart else 512 * 1024 if path in {'/follow-up', '/complaint-draft'} else 256 * 1024
         buffer, total = bytearray(), 0
         headers = dict(scope.get('headers', []))
         declared = headers.get(b'content-length', b'')
