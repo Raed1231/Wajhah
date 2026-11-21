@@ -30,3 +30,6 @@
 # Local editor metadata
 **/.idea/
 **/.vscode/
+
+# Vercel CLI project link
+.vercel/
